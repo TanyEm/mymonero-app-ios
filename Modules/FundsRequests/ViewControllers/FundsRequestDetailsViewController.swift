@@ -217,13 +217,13 @@ class FundsRequestDetailsViewController: UICommonComponents.Details.ViewControll
 		value += "\r\n" // linebreak
 		value += "------------"
 		value += "\r\n" // linebreak
-		value += NSLocalizedString("If you have MyMonero installed, use this link to send the funds: ", comment: "")
+		value += NSLocalizedString("If you have X-CASH installed, use this link to send the funds: ", comment: "")
 		value += self.fundsRequest.new_URI(inMode: .addressAsAuthority).absoluteString // addr as authority b/c we want it to be clickable
 		value += "\r\n" // spacer
 		value += "\r\n" // linebreak
 		value += String(format:
 			NSLocalizedString(
-				"If you don't have MyMonero installed, download it from %@",
+				"If you don't have X-CASH installed, download it from %@",
 				comment: ""
 			),
 			Homepage.appDownloadLink_fullURL
@@ -257,7 +257,7 @@ class FundsRequestDetailsViewController: UICommonComponents.Details.ViewControll
 	// Imperatives
 	func set_navigationTitle()
 	{
-		self.navigationItem.title = NSLocalizedString("Monero Request", comment: "")
+		self.navigationItem.title = NSLocalizedString("X-CASH Request", comment: "")
 	}
 	//
 	// Overrides - Layout

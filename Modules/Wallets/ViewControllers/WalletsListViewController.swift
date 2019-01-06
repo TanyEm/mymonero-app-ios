@@ -67,7 +67,7 @@ class WalletsListViewController: ListViewController
 	override func new_navigationTitle() -> String
 	{
 		if self.listController.hasBooted == false || self.listController.records.count == 0 {
-			return NSLocalizedString("MyMonero", comment: "")
+			return NSLocalizedString("X-CASH", comment: "")
 		}
 		return NSLocalizedString("Wallets", comment: "")
 	}

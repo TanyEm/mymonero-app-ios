@@ -83,7 +83,7 @@ class ContactDetailsViewController: UICommonComponents.Details.ViewController
 			do {
 				let view = UICommonComponents.Details.CopyableLongStringFieldView(
 					labelVariant: self.fieldLabels_variant,
-					title: NSLocalizedString("XMR Address (cached)", comment: ""),
+					title: NSLocalizedString("XCASH Address (cached)", comment: ""),
 					valueToDisplayIfZero: NSLocalizedString("N/A", comment: "")
 				)
 				self.cached_OAResolved_XMR_address__fieldView = view

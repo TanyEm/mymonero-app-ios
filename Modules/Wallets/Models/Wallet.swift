@@ -41,7 +41,7 @@ class Wallet: PersistableObject
 	// Types
 	enum Currency: String
 	{
-		case Monero = "xmr"
+		case Monero = "xcash"
 		//
 		func jsonRepresentation() -> String
 		{
@@ -60,7 +60,7 @@ class Wallet: PersistableObject
 		{
 			switch currency {
 				case .Monero:
-					return "Monero"
+					return "X-CASH"
 			}
 		}
 		func humanReadableString() -> String

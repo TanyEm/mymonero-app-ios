@@ -154,7 +154,7 @@ extension UICommonComponents
 			if let error = viewController.didFatalErrorOnInit {
 				let alertController = UIAlertController(
 					title: error.localizedDescription,
-					message: error.userInfo["NSLocalizedRecoverySuggestion"] as? String ?? NSLocalizedString("Please ensure MyMonero can access your device camera via iOS Settings > Privacy.", comment: ""),
+					message: error.userInfo["NSLocalizedRecoverySuggestion"] as? String ?? NSLocalizedString("Please ensure X-CASH can access your device camera via iOS Settings > Privacy.", comment: ""),
 					preferredStyle: .alert
 				)
 				alertController.addAction(
@@ -198,7 +198,7 @@ extension UICommonComponents
 				let alertController = UIAlertController(
 					title: NSLocalizedString("Saved Photos Album not available", comment: ""),
 					message: NSLocalizedString(
-						"Please ensure you have allowed MyMonero to access your Photos.",
+						"Please ensure you have allowed X-CASH to access your Photos.",
 						comment: ""
 					),
 					preferredStyle: .alert

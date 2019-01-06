@@ -121,7 +121,7 @@ class CreateWallet_Instructions_ViewController: AddWalletWizardScreen_BaseViewCo
 		var list: [TitleAndDescription] = []
 		list.append(TitleAndDescription(
 			title: NSLocalizedString("Creating a wallet", comment: ""),
-			description: NSLocalizedString("Each Monero wallet gets a unique word-sequence called a mnemonic.", comment: "") // NOTE: non break space
+			description: NSLocalizedString("Each X-CASH wallet gets a unique word-sequence called a mnemonic.", comment: "") // NOTE: non break space
 		))
 		list.append(TitleAndDescription(
 			title: NSLocalizedString("Write down your mnemonic", comment: ""),

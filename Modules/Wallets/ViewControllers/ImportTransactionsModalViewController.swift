@@ -93,7 +93,7 @@ extension ImportTransactionsModal
 			do {
 				let view = UICommonComponents.TooltipSpawningLinkButtonView(
 					tooltipText: NSLocalizedString(
-						"Importing your wallet means the server will scan the entire Monero blockchain for your wallet's past transactions, then stay up-to-date.\n\nAs this process places heavy load on the server, import is triggered by sending a fee with the specific payment ID below to the server at e.g. \(approximate_importOAAddress).",
+						"Importing your wallet means the server will scan the entire X-CASH blockchain for your wallet's past transactions, then stay up-to-date.\n\nAs this process places heavy load on the server, import is triggered by sending a fee with the specific payment ID below to the server at e.g. \(approximate_importOAAddress).",
 						comment: ""
 					)
 				)
@@ -117,7 +117,7 @@ extension ImportTransactionsModal
 			do {
 				let view = UICommonComponents.TooltipSpawningLinkButtonView(
 					tooltipText: NSLocalizedString(
-						"For convenience you may send the fee from MyMonero here, or the official CLI or GUI tools, or any other Monero wallet.\n\nPlease be sure to use the exact payment ID below, so the server knows which wallet to import.",
+						"For convenience you may send the fee from X-CASH here, or the official CLI or GUI tools, or any other X-CASH wallet.\n\nPlease be sure to use the exact payment ID below, so the server knows which wallet to import.",
 						comment: ""
 					)
 				)
@@ -154,7 +154,7 @@ extension ImportTransactionsModal
 				inputField.isImmutable = true
 				view.currencyPickerButton.isEnabled = false
 				view.currencyPickerButton.set(
-					selectedCurrency: .XMR,
+					selectedCurrency: .XCASH,
 					skipSettingOnPickerView: false/*ofc*/
 				)
 				self.amount_fieldset = view
@@ -314,7 +314,7 @@ extension ImportTransactionsModal
 				self.informationalLabel.setMessageText(
 					String(
 						format: NSLocalizedString(
-							"This requires a one-time import fee of %@ XMR", // no break spaces btwn of and amt and amt and ccy 
+							"This requires a one-time import fee of %@ XCASH", // no break spaces btwn of and amt and amt and ccy
 							comment: ""
 						),
 						formatted_importFee
@@ -344,7 +344,7 @@ extension ImportTransactionsModal
 				}
 				self.amount_fieldset.inputField.text = amountStr
 				self.amount_fieldset.currencyPickerButton.set( // just to be explicit
-					selectedCurrency: .XMR,
+					selectedCurrency: .XCASH,
 					skipSettingOnPickerView: false
 				)
 			}
@@ -386,7 +386,7 @@ extension ImportTransactionsModal
 			do {
 				self.set(
 					validationMessage: NSLocalizedString(
-						"Sending \(self.importRequestInfoAndStatus_receivedResult!.import_fee.localized_formattedString) XMR…",
+						"Sending \(self.importRequestInfoAndStatus_receivedResult!.import_fee.localized_formattedString) X-CASH…",
 						comment: ""
 					),
 					wantsXButton: false

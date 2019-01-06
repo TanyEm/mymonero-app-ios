@@ -119,7 +119,7 @@ extension SendFundsForm
 			do {
 				let view = UICommonComponents.TooltipSpawningLinkButtonView(
 					tooltipText: NSLocalizedString(
-						"Monero makes transactions\nwith your \"available outputs\",\nso part of your balance will\nbe briefly locked and then\nreturned as change.",
+						"X-CASH makes transactions\nwith your \"available outputs\",\nso part of your balance will\nbe briefly locked and then\nreturned as change.",
 						comment: ""
 					)
 				)
@@ -144,7 +144,7 @@ extension SendFundsForm
 				let view = UICommonComponents.TooltipSpawningLinkButtonView(
 					tooltipText: String(
 						format: NSLocalizedString(
-							"Ring size value set to\nMonero default of %d.",
+							"Ring size value set to\nX-CASH default of %d.",
 							comment: ""
 						),
 						MyMoneroCore.fixedRingsize
@@ -165,7 +165,7 @@ extension SendFundsForm
 							"Currency selector for\ndisplay purposes only.\nThe app will send %@.\n\nRate providers include\n%@.",
 							comment:""
 						),
-						CcyConversionRates.Currency.XMR.symbol,
+						CcyConversionRates.Currency.XCASH.symbol,
 						SendFundsForm.rateAPI_domain // not .authority - don't need subdomain
 					),
 					wantsMAXbutton: true
@@ -208,7 +208,7 @@ extension SendFundsForm
 				let view = UICommonComponents.TooltipSpawningLinkButtonView(
 					tooltipText: String(
 						format: NSLocalizedString(
-							"Based on Monero network\nfee estimate (not final).\n\nMyMonero does not charge\na transfer service fee.",
+							"Based on X-CASH network\nfee estimate (not final).\n\nX-CASH does not charge\na transfer service fee.",
 							comment: ""
 						)
 					)
@@ -233,7 +233,7 @@ extension SendFundsForm
 				let view = UICommonComponents.TooltipSpawningLinkButtonView(
 					tooltipText: String(
 						format: NSLocalizedString(
-							"Please double-check\nyour recipient info as\nMonero transfers are\nnot yet reversible.",
+							"Please double-check\nyour recipient info as\nX-CASH transfers are\nnot yet reversible.",
 							comment: ""
 						)
 					)
@@ -434,7 +434,7 @@ extension SendFundsForm
 			do {
 				let view = UICommonComponents.TooltipSpawningLinkButtonView(
 					tooltipText: NSLocalizedString(
-						"You can pay the Monero\nnetwork a higher fee to\nhave your transfers\nconfirmed faster.",
+						"You can pay the X-CASH\nnetwork a higher fee to\nhave your transfers\nconfirmed faster.",
 						comment: ""
 					)
 				)
@@ -523,7 +523,7 @@ extension SendFundsForm
 		override func setup_navigation()
 		{
 			super.setup_navigation()
-			self.navigationItem.title = NSLocalizedString("Send Monero", comment: "")
+			self.navigationItem.title = NSLocalizedString("Send X-CASH", comment: "")
 			self.navigationItem.rightBarButtonItem = UICommonComponents.NavigationBarButtonItem(
 				type: .send,
 				target: self,
@@ -726,7 +726,7 @@ extension SendFundsForm
 				return nil
 			}
 			let displayCurrency = self.amount_fieldset.currencyPickerButton.selectedCurrency
-			if displayCurrency != .XMR {
+			if displayCurrency != .XCASH {
 				let converted_amountDouble = displayCurrency.displayUnitsRounded_amountInCurrency(
 					fromMoneroAmount: xmr_estMaxAmount
 				)
@@ -883,7 +883,7 @@ extension SendFundsForm
 			if isSweeping == false {
 				assert(amount_submittableDouble != nil && amountText != nil && amountText != "")
 				if amount_submittableDouble == nil {
-					self.setValidationMessage(NSLocalizedString("Please enter a valid amount of Monero.", comment: ""))
+					self.setValidationMessage(NSLocalizedString("Please enter a valid amount of X-CASH.", comment: ""))
 					return
 				}
 				if amount_submittableDouble! <= 0 {
@@ -1025,7 +1025,7 @@ extension SendFundsForm
 			}
 			//
 			// now if using alternate display currency, be sure to ask for terms agreement before doing send
-			if isSweeping == false && selectedCurrency != .XMR {
+			if isSweeping == false && selectedCurrency != .XCASH {
 				let hasAgreedToUsageGateTerms = UserDefaults.standard.bool(
 					forKey: UsageGateState_PlainStorage_Keys.hasAgreedToTermsOfCalculatedEffectiveMoneroAmount.key
 				)
@@ -1039,7 +1039,7 @@ extension SendFundsForm
 								comment: ""
 							),
 							selectedCurrency.symbol,
-							CcyConversionRates.Currency.XMR.symbol,
+							CcyConversionRates.Currency.XCASH.symbol,
 							SendFundsForm.rateAPI_domain // not .authority - don't need subdomain
 						),
 						preferredStyle: .alert
@@ -1049,7 +1049,7 @@ extension SendFundsForm
 							title: String(
 								format: NSLocalizedString("Agree and Send %@ %@", comment: ""),
 								MoneroAmount.shared_localized_doubleFormatter().string(for: amount_submittableDouble!)!,
-								CcyConversionRates.Currency.XMR.symbol
+								CcyConversionRates.Currency.XCASH.symbol
 							),
 							style: .destructive // or is red negative b/c the action is also constructive? (use .default)
 						) { (result: UIAlertAction) -> Void in
@@ -1082,7 +1082,7 @@ extension SendFundsForm
 								comment: ""
 							),
 							MoneroAmount.shared_localized_doubleFormatter().string(for: amount_submittableDouble!)!,
-							CcyConversionRates.Currency.XMR.symbol
+							CcyConversionRates.Currency.XCASH.symbol
 						),
 						preferredStyle: .alert
 					)
@@ -1427,7 +1427,7 @@ extension SendFundsForm
 		}
 		func __shared_havingClearedForm_didPick(requestPayload: MoneroUtils.URIs.Requests.ParsedRequest)
 		{
-			var currencyToSelect: CcyConversionRates.Currency = .XMR // the default; to be finalized as follows…
+			var currencyToSelect: CcyConversionRates.Currency = .XCASH // the default; to be finalized as follows…
 			if let amountCurrencySymbol = requestPayload.amountCurrency,
 				amountCurrencySymbol != ""
 			{

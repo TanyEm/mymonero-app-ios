@@ -89,7 +89,7 @@ class AboutMyMoneroViewController: UIViewController
 	}
 	func setup_navigation()
 	{
-		self.navigationItem.title = NSLocalizedString("About MyMonero", comment: "")
+		self.navigationItem.title = NSLocalizedString("About X-CASH", comment: "")
 		self.navigationItem.leftBarButtonItem = UICommonComponents.NavigationBarButtonItem(
 			type: .cancel,
 			tapped_fn:

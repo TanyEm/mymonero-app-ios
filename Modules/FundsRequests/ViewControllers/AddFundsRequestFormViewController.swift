@@ -90,7 +90,7 @@ class AddFundsRequestFormViewController: UICommonComponents.FormViewController
 		super.setup_views()
 		do {
 			let view = UICommonComponents.Form.FieldLabel(
-				title: NSLocalizedString("RECEIVE MONERO AT", comment: "")
+				title: NSLocalizedString("RECEIVE X-CASH AT", comment: "")
 			)
 			self.toWallet_label = view
 			self.scrollView.addSubview(view)
@@ -161,7 +161,7 @@ class AddFundsRequestFormViewController: UICommonComponents.FormViewController
 		//
 		do {
 			let view = UICommonComponents.Form.FieldLabel(
-				title: NSLocalizedString("REQUEST MONERO FROM", comment: "")
+				title: NSLocalizedString("REQUEST X-CASH FROM", comment: "")
 			)
 			self.requestFrom_label = view
 			self.scrollView.addSubview(view)
@@ -511,7 +511,7 @@ class AddFundsRequestFormViewController: UICommonComponents.FormViewController
 		do {
 			assert(submittableDoubleAmount != nil || amount == nil || amount == "")
 			if submittableDoubleAmount == nil && (amount != nil && amount != "") { // something entered but not usable
-				self.setValidationMessage(NSLocalizedString("Please enter a valid amount  Monero.", comment: ""))
+				self.setValidationMessage(NSLocalizedString("Please enter a valid amount X-CASH.", comment: ""))
 				return
 			}
 		}

@@ -137,7 +137,7 @@ class ContactFormSubmissionController: OpenAliasResolverRequestMaker
 		let (err_str, decodedAddressComponents) = MyMoneroCore.shared_objCppBridge.decoded(address: xmrAddress)
 		if let _ = err_str {
 			self.parameters.preSuccess_terminal_validationMessage_fn(
-				NSLocalizedString("Please enter a valid Monero address", comment: "") // not using the error here cause it can be pretty unhelpful to the lay user
+				NSLocalizedString("Please enter a valid X-CASH address", comment: "") // not using the error here cause it can be pretty unhelpful to the lay user
 			)
 			return
 		}

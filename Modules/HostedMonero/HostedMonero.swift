@@ -84,7 +84,7 @@ extension HostedMonero
 				let account_scanned_tx_height = response_jsonDict["scanned_height"] as! UInt64
 				let account_scanned_block_height = response_jsonDict["scanned_block_height"] as! UInt64
 				let account_scan_start_height = response_jsonDict["start_height"] as! UInt64
-				let transaction_height = response_jsonDict["transaction_height"] as! UInt64
+				//let transaction_height = response_jsonDict["transaction_height"] as! UInt64
 				let blockchain_height = response_jsonDict["blockchain_height"] as! UInt64
 				let spent_outputs = response_jsonDict["spent_outputs"] as? [[String: Any]] ?? [[String: Any]]()
 				//
@@ -133,7 +133,7 @@ extension HostedMonero
 					account_scanned_tx_height: account_scanned_tx_height,
 					account_scanned_block_height: account_scanned_block_height,
 					account_scan_start_height: account_scan_start_height,
-					transaction_height: transaction_height,
+					transaction_height: 0,
 					blockchain_height: blockchain_height,
 					//
 					spentOutputs: final_spentOutputs,
@@ -168,15 +168,15 @@ extension HostedMonero
 			let account_scanned_tx_height = response_jsonDict["scanned_height"] as! UInt64
 			let account_scanned_block_height = response_jsonDict["scanned_block_height"] as! UInt64
 			let account_scan_start_height = response_jsonDict["start_height"] as! UInt64
-			let transaction_height = response_jsonDict["transaction_height"] as! UInt64
+			//let transaction_height = response_jsonDict["transaction_height"] as! UInt64
 			let blockchain_height = response_jsonDict["blockchain_height"] as! UInt64
 			//
 			var mutable_transactions: [MoneroHistoricalTransactionRecord] = []
 			let transaction_dicts = response_jsonDict["transactions"] as? [[String: Any]] ?? []
 			for (_, tx_dict) in transaction_dicts.enumerated() {
 				assert(blockchain_height != 0)  // if we have txs to parse, I think we can assume height != 0
-				//
-				var mutable__tx_total_sent = MoneroAmount(tx_dict["total_sent"] as! String)!
+				//String(format: "%d", tx_dict["total_sent"])
+				var mutable__tx_total_sent = MoneroAmount(String(format: "%d", tx_dict["total_sent"] as! CVarArg))!
 				let spent_outputs: [[String: Any]] = tx_dict["spent_outputs"] as? [[String: Any]] ?? []
 				var mutable__final_tx_spent_output_dicts = [[String: Any]]()
 				for (_, spent_output) in spent_outputs.enumerated() {
@@ -239,7 +239,9 @@ extension HostedMonero
 					spent_outputs: MoneroSpentOutputDescription.newArray(
 						withAPIJSONDicts: final_tx_spent_output_dicts // must use this as it's been adjusted for non-own outputs
 					),
-					timestamp: MoneroJSON_dateFormatter.date(from: "\(tx_dict["timestamp"] as! String)")!,
+					timestamp: Date(),
+					//timestamp: NSDate(timeIntervalSince1970: Double(tx_dict["timestamp"] as! String)!) as Date,
+					//timestamp: MoneroJSON_dateFormatter.date(from: "\(tx_dict["timestamp"] as! String)")!,
 					hash: tx_dict["hash"] as! MoneroTransactionHash,
 					paymentId: final__paymentId,
 					mixin: tx_dict["mixin"] as? UInt,
@@ -273,7 +275,7 @@ extension HostedMonero
 				account_scanned_height: account_scanned_tx_height, // account_scanned_tx_height =? account_scanned_height
 				account_scanned_block_height: account_scanned_block_height,
 				account_scan_start_height: account_scan_start_height,
-				transaction_height: transaction_height,
+				transaction_height: 0,
 				blockchain_height: blockchain_height,
 				//
 				transactions: final_transactions
@@ -448,7 +450,7 @@ extension HostedMonero
 		//
 		// Static - Constants
 		static let apiAddress_scheme = "https"
-		static let mymonero_apiAddress_authority = "api.mymonero.com:8443"
+		static let mymonero_apiAddress_authority = "wallet.x-cash.org:1984"
 		//
 		static let mymonero_importFeeSubmissionTarget_openAliasAddress = "import.mymonero.com" // possibly exists a better home for this
 		//
@@ -890,11 +892,12 @@ extension HostedMonero
 							} catch {
 							}
 						} else {
+							DDLog.Error("HostedMonero", "\(url), response: \(response)")
 						}
 						fn(errStr, nil, nil) // localized description ok here?
 						return
 					case .success:
-						DDLog.Done("HostedMonero", "\(url) \(statusCode)")
+						DDLog.Done("HostedMonero", "\(url), response: \(response)")
 						break
 				}
 				guard let result_value = response.result.value else {

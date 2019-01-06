@@ -61,7 +61,7 @@ class WalletsListEmptyView: UIView
 		do {
 			let view = UICommonComponents.EmptyStateView(
 				emoji: "😃",
-				message: NSLocalizedString("Welcome to MyMonero!\nLet's get started.", comment: "")
+				message: NSLocalizedString("Welcome to X-CASH!\nLet's get started.", comment: "")
 			)
 			self.emptyStateView = view
 			self.addSubview(view)

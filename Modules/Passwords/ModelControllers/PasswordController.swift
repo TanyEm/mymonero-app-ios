@@ -715,7 +715,7 @@ final class PasswordController
 				let policy: LAPolicy = .deviceOwnerAuthenticationWithBiometrics
 				var authError: NSError?
 				if laContext.canEvaluatePolicy(policy, error: &authError) {
-					let reason_localizedString = NSLocalizedString(customNavigationBarTitle ?? "Authenticate to allow MyMonero to perform this action.", comment: "")
+					let reason_localizedString = NSLocalizedString(customNavigationBarTitle ?? "Authenticate to allow X-CASH to perform this action.", comment: "")
 					laContext.evaluatePolicy(policy, localizedReason: reason_localizedString)
 					{ [weak self] (success, evaluateError) in
 						guard let thisSelf = self else {

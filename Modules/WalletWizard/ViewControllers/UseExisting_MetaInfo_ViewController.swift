@@ -105,7 +105,7 @@ class UseExisting_MetaInfo_ViewController: AddWalletWizardScreen_MetaInfo_BaseVi
 			do {
 				let view = UICommonComponents.TooltipSpawningLinkButtonView(
 					tooltipText: NSLocalizedString(
-						"This secret mnemonic is never sent to the MyMonero server.",
+						"This secret mnemonic is never sent to the X-CASH server.",
 						comment: ""
 					)
 				)
@@ -177,7 +177,7 @@ class UseExisting_MetaInfo_ViewController: AddWalletWizardScreen_MetaInfo_BaseVi
 			do {
 				let view = UICommonComponents.TooltipSpawningLinkButtonView(
 					tooltipText: NSLocalizedString(
-						"This private view key and the wallet address are the only things sent to the MyMonero server.",
+						"This private view key and the wallet address are the only things sent to the X-CASH server.",
 						comment: ""
 					)
 				)
@@ -211,7 +211,7 @@ class UseExisting_MetaInfo_ViewController: AddWalletWizardScreen_MetaInfo_BaseVi
 			do {
 				let view = UICommonComponents.TooltipSpawningLinkButtonView(
 					tooltipText: NSLocalizedString(
-						"This private spend key is never sent to the MyMonero server.",
+						"This private spend key is never sent to the X-CASH server.",
 						comment: ""
 					)
 				)

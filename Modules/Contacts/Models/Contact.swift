@@ -52,7 +52,7 @@ class Contact: PersistableObject
 		case address = "address"
 		case payment_id = "payment_id"
 		case emoji = "emoji"
-		case cached_OAResolved_XMR_address = "cached_OAResolved_XMR_address"
+		case cached_OAResolved_XMR_address = "cached_OAResolved_XCASH_address"
 	}
 	//
 	// Properties - Principal Persisted Values

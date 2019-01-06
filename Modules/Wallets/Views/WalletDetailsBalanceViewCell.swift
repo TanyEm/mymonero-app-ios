@@ -325,7 +325,7 @@ extension WalletDetails
 					}
 					//
 					// currency suffix
-					if displayCurrency != .XMR {
+					if displayCurrency != .XCASH {
 						let string = " " + displayCurrency.symbol
 						let attrString = NSAttributedString(
 							string: string,

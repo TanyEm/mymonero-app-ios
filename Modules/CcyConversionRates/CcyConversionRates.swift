@@ -61,6 +61,7 @@ extension CcyConversionRates
 	{
 		case none = "" // included for completeness / convenience / API
 		case XMR = "XMR" // included for completeness / convenience / API
+		case XCASH = "XCASH"
 		case USD = "USD"
 		case AUD = "AUD"
 		case BRL = "BRL"
@@ -100,10 +101,10 @@ extension CcyConversionRates
 			return CurrencyUID(self.rawValue)
 		}
 		var hasAtomicUnits: Bool {
-			return self == .XMR
+			return self == .XCASH
 		}
 		var unitsForDisplay: Int {
-			if self == .XMR {
+			if self == .XCASH {
 				return MoneroConstants.currency_unitPlaces
 			}
 			return 2
@@ -116,6 +117,7 @@ extension CcyConversionRates
 					// intentionally not including .none… it's not a currency
 					//
 					.XMR, // we want to display XMR in all currency selectors so far - but argument could be made for removing it and inserting it per use-xcase
+					.XCASH,
 					.USD,
 					.AUD,
 					.BRL,
@@ -159,7 +161,7 @@ extension CcyConversionRates.Currency
 		final_amountDouble: Double,
 		decimalSeparator: String = Locale.current.decimalSeparator ?? "."
 	) -> String {
-		assert(self != .XMR)
+		assert(self != .XCASH)
 		if final_amountDouble == 0 {
 			return "0" // not 0.0 / 0,0 / ...
 		}
@@ -220,7 +222,7 @@ extension CcyConversionRates.Currency
 			fatalError("Selected currency unexpectedly .none") // TODO: should this be a throw instead?
 		}
 		let moneroAmountDouble = DoubleFromMoneroAmount(moneroAmount: moneroAmount)
-		if self == .XMR {
+		if self == .XCASH {
 			return moneroAmountDouble // no conversion necessary
 		}
 		let xmrToCurrencyRate = CcyConversionRates.Controller.shared.rateFromXMR_orNilIfNotReady(
@@ -252,7 +254,7 @@ extension CcyConversionRates.Currency
 			final_input_amount = amount
 		}
 		var mutable_ccy = ccy
-		if ccy == .XMR {
+		if ccy == .XCASH {
 			formattedAmount = final_input_amount!.localized_formattedString
 		} else {
 			let convertedAmount = ccy.displayUnitsRounded_amountInCurrency(fromMoneroAmount: final_input_amount!)
@@ -260,7 +262,7 @@ extension CcyConversionRates.Currency
 				formattedAmount = MoneroAmount.shared_localized_doubleFormatter().string(for: convertedAmount)!
 			} else {
 				formattedAmount = final_input_amount!.localized_formattedString
-				mutable_ccy = .XMR // display XMR until rate is ready? or maybe just show 'LOADING…'?
+				mutable_ccy = .XCASH // display XMR until rate is ready? or maybe just show 'LOADING…'?
 			}
 		}
 		return (formattedAmount, mutable_ccy)
@@ -305,7 +307,7 @@ extension CcyConversionRates
 		func isRateReady( // if you won't need the actual value
 			fromXMRToCurrency currency: Currency
 		) -> Bool {
-			if currency == .none || currency == .XMR {
+			if currency == .none || currency == .XCASH {
 				fatalError("Invalid 'currency' argument value")
 			}
 			return self.xmrToCurrencyRatesByCurrencyUID[currency.uid] != nil
@@ -313,7 +315,7 @@ extension CcyConversionRates
 		func rateFromXMR_orNilIfNotReady(
 			toCurrency currency: Currency
 		) -> Rate? {
-			if currency == .none || currency == .XMR {
+			if currency == .none || currency == .XCASH {
 				fatalError("Invalid 'currency' argument value")
 			}
 			return self.xmrToCurrencyRatesByCurrencyUID[currency.uid] // which may be nil if the rate is not ready yet

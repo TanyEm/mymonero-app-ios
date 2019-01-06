@@ -248,7 +248,7 @@ class FundsRequestsCellContentView: UIView
 					amountLabel_text = String(format:
 						NSLocalizedString("%@ %@", comment: ""),
 						object.amount!,
-						(object.amountCurrency ?? "XMR")
+						(object.amountCurrency ?? "XCASH")
 					)
 				} else {
 					amountLabel_text = NSLocalizedString("Any amount", comment: "")

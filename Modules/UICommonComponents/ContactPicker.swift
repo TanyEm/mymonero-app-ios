@@ -158,7 +158,7 @@ extension UICommonComponents.Form
 			if self.displayMode == .paymentIds_andResolvedAddrs {
 				do {
 					let view = UICommonComponents.Form.FieldLabel(
-						title: NSLocalizedString("MONERO ADDRESS", comment: "")
+						title: NSLocalizedString("X-CASH ADDRESS", comment: "")
 					)
 					view.isHidden = true
 					self.resolvedXMRAddr_label = view
@@ -434,7 +434,7 @@ extension UICommonComponents.Form
 							// TODO: assert we think this is a monero addr first?
 							let (err_str, decodedAddress) = MyMoneroCore.shared_objCppBridge.decoded(address: contact.address)
 							if err_str != nil {
-								DDLog.Warn("UICommonComponents.ContactPicker", "Couldn't decode CONTACT's non-OA address as a Monero address!")
+								DDLog.Warn("UICommonComponents.ContactPicker", "Couldn't decode CONTACT's non-OA address as a X-CASH address!")
 								assert(false) // We're never expecting this here
 								// TODO: implement something like this: (but named discretely obvs)
 								//									if let fn = self.finishedValidatingTextInput_foundInvalidMoneroAddress_fn {
@@ -726,7 +726,7 @@ extension UICommonComponents.Form
 			if couldBeOAAddress == false {
 				let (err_str, decodedAddressComponents) = MyMoneroCore.shared_objCppBridge.decoded(address: possibleAddress)
 				if let _ = err_str {
-					DDLog.Warn("UICommonComponents.ContactPicker", "Couldn't decode as a Monero address.")
+					DDLog.Warn("UICommonComponents.ContactPicker", "Couldn't decode as a X-CASH address.")
 					self.isValidatingOrResolvingNonZeroTextInput = false // un-set due to imminent exit
 					if let fn = self.finishedValidatingTextInput_foundInvalidMoneroAddress_fn {
 						fn()
@@ -1433,7 +1433,7 @@ extension UICommonComponents.Form
 					let cached_OAResolved_XMR_address = response!.moneroReady_address
 					if cached_OAResolved_XMR_address == nil {
 						if let fn = this.parameters.oaResolve__preSuccess_terminal_validationMessage_fn {
-							fn(NSLocalizedString("OpenAlias address no longer lists Monero address", comment: ""))
+							fn(NSLocalizedString("OpenAlias address no longer lists X-CASH address", comment: ""))
 							return
 						}
 					}

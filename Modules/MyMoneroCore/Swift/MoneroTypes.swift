@@ -41,16 +41,16 @@ let MoneroJSON_dateFormatter = ISO8601DateFormatter() // we can use this new bui
 // Constants
 struct MoneroConstants
 {
-	static let currency_name = "Monero"
-	static let currency_symbol = "XMR"
-	static let currency_requestURIPrefix = "monero:"
-	static let currency_requestURIPrefix_sansColon = "monero"
-	static let currency_openAliasPrefix = "xmr" // OpenAlias prefix
+	static let currency_name = "X-CASH"
+	static let currency_symbol = "XCASH"
+	static let currency_requestURIPrefix = "xcash:"
+	static let currency_requestURIPrefix_sansColon = "xcash"
+	static let currency_openAliasPrefix = "xcash" // OpenAlias prefix
 	//
-	static let addressPrefix = 18 // Prefix code for addresses; 18 => addresses start with "4"
-	static let integratedAddressPrefix = 19 // Prefix code for addresses
+	static let addressPrefix = 0x5c134 // Prefix code for addresses; 0x5c134 => addresses start with "XCA"
+	static let integratedAddressPrefix = 0x3fc134 // Prefix code for addresses
 	//
-	static let currency_unitPlaces = 12 // Number of atomic units in one unit of currency. e.g. 12 => 10^12 =
+	static let currency_unitPlaces = 6 // Number of atomic units in one unit of currency. e.g. 6 => 10^6 =
 	//
 	static let txMinConfirms = 10 // Minimum number of confirmations for a transaction to show as confirmed
 	static let maxBlockNumber = 500000000 // Maximum block number, used for tx unlock time
@@ -94,7 +94,7 @@ typealias MoneroKeyImage = MoneroTypeString
 typealias MoneroKey = MoneroTypeString
 //
 typealias MoneroConvertableCurrencySymbol = String
-let MoneroConvertableCurrencySymbol_for_XMR = "XMR"
+let MoneroConvertableCurrencySymbol_for_XMR = "XCASH"
 //
 struct MoneroDecodedAddressComponents
 {
@@ -688,6 +688,8 @@ struct MoneroSpentOutputDescription: Equatable
 			tx_prefix_hash: dict["tx_prefix_hash"] as! String,
 			spend_key_images: dict["spend_key_images"] as? [String] ?? [],
 			timestamp: MoneroJSON_dateFormatter.date(from: "\(dict["timestamp"] as! String)")!,
+			//timestamp: NSDate(timeIntervalSince1970: Double(dict["timestamp"] as! String)!) as Date,
+			//timestamp: MoneroJSON_dateFormatter.date(from: "\(dict["timestamp"] as! String)")!,
 			height: dict["height"] as! UInt64
 		)
 		return outputDescription

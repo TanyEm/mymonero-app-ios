@@ -122,14 +122,14 @@ class MyMoneroScreenshotsUITests: XCTestCase
 		do {
 			let field = app.textFields["Enter name"]
 			field.tap()
-			field.typeText("The Monero Project")
+			field.typeText("The X-CASH Project")
 		}
 		do {
 			let enterAddressEmailOrDomainTextView = app.scrollViews.otherElements.textViews.containing(.staticText, identifier:"Enter address, email, or domain").element
 			enterAddressEmailOrDomainTextView.tap()
 			enterAddressEmailOrDomainTextView.tap()
 			enterAddressEmailOrDomainTextView.tap()
-			app.scrollViews.children(matching: .other).element(boundBy: 0).children(matching: .textView).element.typeText("donate@getmonero.org")
+			app.scrollViews.children(matching: .other).element(boundBy: 0).children(matching: .textView).element.typeText("info@x-cash.org")
 		}
 		app.navigationBars["New Contact"].buttons["Save"].tap()
 		//
@@ -155,7 +155,7 @@ class MyMoneroScreenshotsUITests: XCTestCase
 		let elementsQuery = app.scrollViews.otherElements
 		elementsQuery.textFields["Contact name or address/domain"].tap()
 		sleep(1) // wait for results / keyboard to show
-		app.collectionViews.cells["button.The Monero Project"].tap()
+		app.collectionViews.cells["button.The X-CASH Project"].tap()
 		sleep(3) // wait for possible DNS resolution again
 		//
 		snapshot("04_Send")

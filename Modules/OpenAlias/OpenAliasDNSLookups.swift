@@ -202,7 +202,7 @@ struct OpenAliasDNSLookups
 				assert(currency == .monero) // only one supported at the moment
 				let (decode__err_str, _) = MyMoneroCore.shared_objCppBridge.decoded(address: resolvedAddressDescription.recipient_address)
 				if let _ = decode__err_str {
-					fn(NSLocalizedString("Domain's TXT records had OpenAlias prefix but not a valid Monero address.", comment: ""), nil)
+					fn(NSLocalizedString("Domain's TXT records had OpenAlias prefix but not a valid X-CASH address.", comment: ""), nil)
 					return
 				}
 				let validResolvedDescription = ValidResolvedAddressDescription(
@@ -221,7 +221,7 @@ struct OpenAliasDNSLookups
 	
 	enum OpenAliasAddressCurrency: String
 	{
-		case monero = "xmr"
+		case monero = "xcash"
 		case bitcoin = "btc"
 		//
 		var txtRecordPrefixTokenForCurrency: String {

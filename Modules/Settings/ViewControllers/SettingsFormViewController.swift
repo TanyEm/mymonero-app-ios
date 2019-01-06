@@ -319,7 +319,7 @@ class SettingsFormViewController: UICommonComponents.FormViewController, Setting
 		}
 		do {
 			let view = UICommonComponents.FormInputField(
-				placeholder: NSLocalizedString("Leave blank to use mymonero.com", comment: "")
+				placeholder: NSLocalizedString("Leave blank to use x-cash.org", comment: "")
 			)
 			view.keyboardType = .URL
 			view.autocorrectionType = .no
@@ -740,7 +740,7 @@ class SettingsFormViewController: UICommonComponents.FormViewController, Setting
 		let alertController = UIAlertController(
 			title: NSLocalizedString("Delete everything?", comment: ""),
 			message: NSLocalizedString(
-				"Are you sure you want to delete all of your local data?\n\nAny wallets will remain permanently on the Monero blockchain but local data such as contacts will not be recoverable at present.",
+				"Are you sure you want to delete all of your local data?\n\nAny wallets will remain permanently on the X-CASH blockchain but local data such as contacts will not be recoverable at present.",
 				comment: ""
 			),
 			preferredStyle: .alert

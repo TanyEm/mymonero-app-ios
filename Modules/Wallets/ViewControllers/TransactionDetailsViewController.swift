@@ -234,7 +234,7 @@ extension TransactionDetails
 //					if floatAmount > 0 {
 //						validationMessage += NSLocalizedString("Some Monero is arriving.", comment: "")
 //					} else {
-					validationMessage += NSLocalizedString("Your Monero is on its way.", comment: "")
+					validationMessage += NSLocalizedString("Your X-CASH is on its way.", comment: "")
 //					}
 				}
 			}

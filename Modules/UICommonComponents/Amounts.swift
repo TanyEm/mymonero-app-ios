@@ -260,7 +260,7 @@ extension UICommonComponents.Form.Amounts
 			}
 			let selectedCurrency = self.currencyPickerButton.selectedCurrency
 			let displayCurrency = SettingsController.shared.displayCurrency
-			if selectedCurrency == .XMR && displayCurrency == .XMR { // special case - no label necessary
+			if selectedCurrency == .XCASH && displayCurrency == .XCASH { // special case - no label necessary
 				__hideEffectiveAmountUI()
 				return
 			}
@@ -268,14 +268,14 @@ extension UICommonComponents.Form.Amounts
 			let xmrAmountDouble_orNil = self.inputField.submittableMoneroAmountDouble_orNil(selectedCurrency: selectedCurrency)
 			if xmrAmountDouble_orNil == nil {
 				// but not empty … should have an amount… must be a non-XMR currency
-				assert(selectedCurrency != .XMR)
+				assert(selectedCurrency != .XCASH)
 				__convenience_setLoadingTextAndHideTooltip()
 				return
 			}
 			let moneroAmount = MoneroAmount.new(withDouble: xmrAmountDouble_orNil!)
 			var finalizable_text: String
-			if selectedCurrency == .XMR {
-				assert(displayCurrency != .XMR)
+			if selectedCurrency == .XCASH {
+				assert(displayCurrency != .XCASH)
 				let isRateReady = CcyConversionRates.Controller.shared.isRateReady(
 					fromXMRToCurrency: displayCurrency
 				)
@@ -301,7 +301,7 @@ extension UICommonComponents.Form.Amounts
 						comment: ""
 					),
 					moneroAmount.localized_formattedString,
-					CcyConversionRates.Currency.XMR.symbol
+					CcyConversionRates.Currency.XCASH.symbol
 				)
 			}
 			let final_text = finalizable_text
@@ -549,7 +549,7 @@ extension UICommonComponents.Form.Amounts
 			guard let userInputAmountDouble = self.submittableAmountRawDouble_orNil else {
 				return nil
 			}
-			if selectedCurrency == .XMR {
+			if selectedCurrency == .XCASH {
 				return userInputAmountDouble // identity rate - NOTE: this is also the RAW non-truncated amount
 			}
 			let xmrAmountDouble = CcyConversionRates.Currency.rounded_ccyConversionRateCalculated_moneroAmountDouble(

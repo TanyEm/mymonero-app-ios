@@ -75,7 +75,7 @@ class CreateWallet_InformOfMnemonic_ViewController: AddWalletWizardScreen_BaseVi
 		}
 		do {
 			let view = self.note_messageView
-			view.set(text: NSLocalizedString("NOTE: This is the only way to access your wallet if you switch devices, use another Monero wallet app, or lose your data.", comment: ""))
+			view.set(text: NSLocalizedString("NOTE: This is the only way to access your wallet if you switch devices, use another X-CASH wallet app, or lose your data.", comment: ""))
 			view.show()
 			self.scrollView.addSubview(view)
 		}

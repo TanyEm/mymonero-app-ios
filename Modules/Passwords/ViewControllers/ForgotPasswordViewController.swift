@@ -132,7 +132,7 @@ class ForgotPasswordViewController: UIViewController
 		let alertController = UIAlertController(
 			title: NSLocalizedString("Delete everything?", comment: ""),
 			message: NSLocalizedString(
-				"Are you sure you want to clear your locally stored data?\n\nAny wallets will remain permanently on the Monero blockchain. At present, local-only data like contacts would not be recoverable.",
+				"Are you sure you want to clear your locally stored data?\n\nAny wallets will remain permanently on the X-CASH blockchain. At present, local-only data like contacts would not be recoverable.",
 				comment: ""
 			),
 			preferredStyle: .alert

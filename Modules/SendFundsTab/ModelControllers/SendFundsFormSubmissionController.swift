@@ -180,7 +180,7 @@ extension SendFundsForm
 			if err_str != nil {
 				self.parameters.preSuccess_terminal_validationMessage_fn(
 					NSLocalizedString(
-						String(format: "Couldn't validate destination Monero address of %@.", xmrAddress_toDecode),
+						String(format: "Couldn't validate destination X-CASH address of %@.", xmrAddress_toDecode),
 						comment: ""
 					)
 				)
@@ -252,7 +252,7 @@ extension SendFundsForm
 			let statusMessage_prefix = self.parameters.isSweeping
 				? NSLocalizedString("Sending wallet balance…", comment: "")
 				: String(
-					format: NSLocalizedString("Sending %@ XMR…", comment: ""),
+					format: NSLocalizedString("Sending %@ XCASH…", comment: ""),
 					MoneroAmount.new(withDouble: self.parameters.amount_submittableDouble!).localized_formattedString
 				)
 			self.parameters.preSuccess_nonTerminal_validationMessageUpdate_fn(statusMessage_prefix) // start with just prefix

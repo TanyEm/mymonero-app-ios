@@ -5,7 +5,7 @@
 	<key>CFBundleDevelopmentRegion</key>
 	<string>en</string>
 	<key>CFBundleDisplayName</key>
-	<string>MyMonero</string>
+	<string>XCash</string>
 	<key>CFBundleExecutable</key>
 	<string>$(EXECUTABLE_NAME)</string>
 	<key>CFBundleIdentifier</key>
@@ -27,7 +27,7 @@
 			<string>$(PRODUCT_BUNDLE_IDENTIFIER)</string>
 			<key>CFBundleURLSchemes</key>
 			<array>
-				<string>monero</string>
+				<string>xcash</string>
 			</array>
 		</dict>
 	</array>
@@ -36,11 +36,13 @@
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
 	<key>NSCameraUsageDescription</key>
-	<string>The MyMonero app uses your device&apos;s camera to scan physical Monero Payment Request QR codes.</string>
+	<string>The X-CASH app uses your device&apos;s camera to scan physical X-CASH Payment Request QR codes.</string>
+	<key>NSFaceIDUsageDescription</key>
+	<string>The X-CASH app lets you use Face ID and Touch ID to authenticate for actions after unlocking the app, such as sending money.</string>
 	<key>NSPhotoLibraryAddUsageDescription</key>
-	<string>The MyMonero app uses your device&apos;s photos album to save and to open Monero Payment Request QR code image files.</string>
+	<string>The X-CASH app uses your device&apos;s photos album to save and to open X-CASH Payment Request QR code image files.</string>
 	<key>NSPhotoLibraryUsageDescription</key>
-	<string>The MyMonero app uses your device&apos;s photos album to save and to open Monero Payment Request QR code image files.</string>
+	<string>The X-CASH app uses your device&apos;s photos album to save and to open X-CASH Payment Request QR code image files.</string>
 	<key>UIAppFonts</key>
 	<array>
 		<string>Native-Bold.otf</string>
@@ -49,8 +51,6 @@
 	</array>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
-	<key>NSFaceIDUsageDescription</key>
-	<string>The MyMonero app lets you use Face ID and Touch ID to authenticate for actions after unlocking the app, such as sending money.</string>
 	<key>UIRequiredDeviceCapabilities</key>
 	<array>
 		<string>armv7</string>

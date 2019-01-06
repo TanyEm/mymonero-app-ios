@@ -91,7 +91,7 @@ class SettingsController: DeleteEverythingRegistrant, ChangePasswordRegistrant
 	// Constants - Default values
 	let default_appTimeoutAfterS: TimeInterval = 90 // s …… 30 was a bit short for new users
 	var default_displayCurrencySymbol: CcyConversionRates.CurrencySymbol {
-		return CcyConversionRates.Currency.XMR.symbol // for now...? mayyyybe detect by locale and try to guess? but that could end up being too inaccurate. language es could appear in Venezualan users and i wouldn't think MXN would be super helpful there - but i have no data on it
+		return CcyConversionRates.Currency.XCASH.symbol // for now...? mayyyybe detect by locale and try to guess? but that could end up being too inaccurate. language es could appear in Venezualan users and i wouldn't think MXN would be super helpful there - but i have no data on it
 	}
 	let default_authentication__requireWhenSending = true
 	let default_authentication__requireToShowWalletSecrets = true
