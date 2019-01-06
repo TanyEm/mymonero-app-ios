@@ -134,6 +134,15 @@ class URLOpening: DeleteEverythingRegistrant
 			return false
 		}
 		if self.isAllowedToReceiveURLs == false { // then defer this til we are ready (as gracefully as we can)
+			if PasswordController.shared.isUserChangingPassword {
+				DDLog.Info("URLOpening", "User is changing pw - not waiting for that to finish since the user probably doesn't want to open the URL in this state anyway")
+				return false
+			}
+			// This is commented because... it'll always be true! Better would be to have a check that says "no wallets saved to disk"
+//			if WalletsListController.shared.records.count == 0 {
+//				DDLog.Info("URLOpening", "No wallet - not waiting for PW entry to open this URL since that may not be what the user intends")
+//				return false
+//			}
 			let hasAPasswordBeenSaved = PasswordController.shared.hasUserSavedAPassword
 			if hasAPasswordBeenSaved == false {
 				// app is blank - no wallets have been created, password hasn't been entered…… ignore so as not to cause a superfluous password entry request
@@ -147,11 +156,9 @@ class URLOpening: DeleteEverythingRegistrant
 				PasswordController.shared.OnceBootedAndPasswordObtained(
 					{ (password, passwordType) in // it might be slightly more rigorous to observe the contact list controller for its next boot to do this but then we have to worry about whether that is waiting for all the information we would end up actually needing… so I'm opting for the somewhat more janky but probably safer option of using a delay to wait for things to load
 						DispatchQueue.main.asyncAfter(
-							deadline: .now() + 0.3, // which is probably excessive but it's ok and possibly preferred in order to let the user orient first
+							deadline: .now() + 0.5, // which is probably excessive but it's ok and possibly preferred in order to let the user orient first
 							execute:
 							{
-								assert(self.isAllowedToReceiveURLs) // assumption
-								//
 								if self.requestURLToOpen_pendingFromDisallowedFromOpening != nil { // if still have one - aka not cancelled
 									self._yieldThatTimeToHandleReceivedMoneroURL(
 										url: self.requestURLToOpen_pendingFromDisallowedFromOpening!
@@ -167,14 +174,13 @@ class URLOpening: DeleteEverythingRegistrant
 				DDLog.Warn("URLOpening", "Already had a URL pending app unlock so not adding another request for PW entry notification.")
 			}
 		} else {
-			self._yieldThatTimeToHandleReceivedMoneroURL(url: url) // this will probably never get hit b/c the app will always be locked out - unless the app is active at time of reception? ever possible on iOS?
+			self._yieldThatTimeToHandleReceivedMoneroURL(url: url)
 		}
 		return true
 	}
 	func _yieldThatTimeToHandleReceivedMoneroURL(
 		url: URL
-	)
-	{
+	) {
 		self.requestURLToOpen_pendingFromDisallowedFromOpening = nil // jic
 		//
 		DispatchQueue.main.async

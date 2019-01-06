@@ -165,7 +165,7 @@ extension CcyConversionRates.Currency
 		if final_amountDouble == 0 {
 			return "0" // not 0.0 / 0,0 / ...
 		}
-		let naiveLocalizedString = MoneroAmount.shared_localized_doubleFormatter().string(for: final_amountDouble)!
+		let naiveLocalizedString = MoneroAmount.shared_localized_twoDecimalPlaceDoubleFormatter().string(for: final_amountDouble)!
 		let components = naiveLocalizedString.components(separatedBy: decimalSeparator)
 		let components_count = components.count
 		assert(components_count > 0, "Unexpected 0 components while formatting nonatomic currency")
@@ -259,7 +259,7 @@ extension CcyConversionRates.Currency
 		} else {
 			let convertedAmount = ccy.displayUnitsRounded_amountInCurrency(fromMoneroAmount: final_input_amount!)
 			if convertedAmount != nil {
-				formattedAmount = MoneroAmount.shared_localized_doubleFormatter().string(for: convertedAmount)!
+				formattedAmount = MoneroAmount.shared_localized_twoDecimalPlaceDoubleFormatter().string(for: convertedAmount)!
 			} else {
 				formattedAmount = final_input_amount!.localized_formattedString
 				mutable_ccy = .XCASH // display XMR until rate is ready? or maybe just show 'LOADING…'?

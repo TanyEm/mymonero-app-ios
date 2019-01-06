@@ -56,6 +56,13 @@ extension WalletDetails
 			var receive_actionButtonView: UICommonComponents.ActionButton!
 			var send_actionButtonView: UICommonComponents.ActionButton!
 			//
+			// Properties - External - Settable after init
+			var _requestButton_tapped: (() -> Void)!
+			func set_requestButton_tapped(_ fn: @escaping (() -> Void))
+			{
+				self._requestButton_tapped = fn
+			}
+			//
 			// Lifecycle - Init - Overrides
 			override func setup()
 			{
@@ -68,7 +75,7 @@ extension WalletDetails
 					let iconImage = UIImage(named: "actionButton_iconImage__request")! // TODO: borrowing the 'request' image for this - not great
 					let view = UICommonComponents.ActionButton(pushButtonType: .utility, isLeftOfTwoButtons: true, iconImage: iconImage)
 					view.addTarget(self, action: #selector(receive_tapped), for: .touchUpInside)
-					view.setTitle(NSLocalizedString("Receive At", comment: ""), for: .normal)
+					view.setTitle(NSLocalizedString("Receive", comment: ""), for: .normal)
 					view.titleEdgeInsets = UICommonComponents.ActionButton.new_titleEdgeInsets_withIcon
 					self.receive_actionButtonView = view
 					self.addSubview(view)
@@ -77,7 +84,7 @@ extension WalletDetails
 					let iconImage = UIImage(named: "actionButton_iconImage__send")!
 					let view = UICommonComponents.ActionButton(pushButtonType: .utility, isLeftOfTwoButtons: false, iconImage: iconImage)
 					view.addTarget(self, action: #selector(send_tapped), for: .touchUpInside)
-					view.setTitle(NSLocalizedString("Send From", comment: ""), for: .normal)
+					view.setTitle(NSLocalizedString("Send", comment: ""), for: .normal)
 					view.titleEdgeInsets = UICommonComponents.ActionButton.new_titleEdgeInsets_withIcon
 					self.send_actionButtonView = view
 					self.addSubview(view)
@@ -129,9 +136,7 @@ extension WalletDetails
 			}
 			@objc func receive_tapped()
 			{
-				let configuration = self.configuration!
-				let wallet = configuration.dataObject as! Wallet
-				WalletAppWalletActionsCoordinator.Trigger_receiveFunds(toWallet: wallet)
+				self._requestButton_tapped()
 			}
 		}
 	}
