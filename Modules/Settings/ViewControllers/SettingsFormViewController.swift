@@ -311,45 +311,12 @@ class SettingsFormViewController: UICommonComponents.FormViewController, Setting
 		}
 		//
 		do {
-			let view = UICommonComponents.Form.FieldLabel(
-				title: NSLocalizedString("SERVER URL", comment: "")
-			)
-			self.address_label = view
-			self.scrollView.addSubview(view)
-		}
-		do {
-			let view = UICommonComponents.FormInputField(
-				placeholder: NSLocalizedString("Leave blank to use x-cash.org", comment: "")
-			)
-			view.keyboardType = .URL
-			view.autocorrectionType = .no
-			view.autocapitalizationType = .none
-			view.spellCheckingType = .no
-			view.returnKeyType = .next
-			view.delegate = self
-			view.addTarget(self, action: #selector(address_inputView__editingChanged), for: .editingChanged)
-			if let value = SettingsController.shared.specificAPIAddressURLAuthority {
-				view.text = value
-			}
-			self.address_inputView = view
-			self.scrollView.addSubview(view)
-		}
-		do {
-			let view = UICommonComponents.GraphicAndLabelActivityIndicatorView()
-			view.set(labelText: NSLocalizedString("CONNECTING…", comment: ""))
-			view.isHidden = true
-			self.resolving_activityIndicator = view
-			self.scrollView.addSubview(view)
-		}
-		//
-		do {
 			let view = UICommonComponents.LinkButtonView(mode: .mono_destructive, size: .larger, title: "DELETE EVERYTHING")
 			view.addTarget(self, action: #selector(deleteButton_tapped), for: .touchUpInside)
 			self.deleteButton = view
 			self.scrollView.addSubview(view)
 		}
 		//
-		let (_, _) = self._updateValidationErrorForAddressInputView() // so we get validation error from persisted but incorrect value, if necessary for user feedback
 	}
 	override func setup_navigation()
 	{
@@ -368,7 +335,6 @@ class SettingsFormViewController: UICommonComponents.FormViewController, Setting
 	{
 		super.tearDown()
 		self.tearDown_timerToSave_durationUpdated()
-		self.tearDown_timerToSave_addressEditingChanged()
 	}
 	override func stopObserving()
 	{ // not that it will ever get called..
@@ -392,21 +358,6 @@ class SettingsFormViewController: UICommonComponents.FormViewController, Setting
 		return nil
 	}
 	//
-	// Accessors
-	var sanitizedInputValue__address: String? {
-		if self.address_inputView.text != nil {
-			guard let raw_text = self.address_inputView.text else {
-				return nil
-			}
-			let trimmed_text = raw_text.trimmingCharacters(in: .whitespacesAndNewlines)
-			if trimmed_text == "" {
-				return nil // still nil
-			}
-			return trimmed_text
-		}
-		return nil
-	}
-	//
 	// Imperatives - Resolving indicator
 	func set(resolvingIndicatorIsVisible: Bool)
 	{
@@ -416,72 +367,6 @@ class SettingsFormViewController: UICommonComponents.FormViewController, Setting
 			self.resolving_activityIndicator.hide()
 		}
 		self.view.setNeedsLayout()
-	}
-	//
-	// Imperatives - Address validation error message
-	func _updateValidationErrorForAddressInputView() -> (
-		didError: Bool,
-		savableValue: String?
-	) {
-		var mutable_value = self.sanitizedInputValue__address // use even nil b/c it means use mymonero.com api
-		// ^- this has had its whitespace trimmed
-		if mutable_value == "" {
-			assert(false)
-			mutable_value = nil
-		}
-		var preSubmission_validationError: String?
-		do {
-			if mutable_value != nil {
-				if mutable_value!.contains(".") == false
-					&& mutable_value!.contains(":") == false
-					&& mutable_value!.contains("localhost") == false {
-					preSubmission_validationError = String(
-						format: NSLocalizedString("Please enter a valid URL authority, e.g. %@.", comment: ""),
-						HostedMonero.APIClient.mymonero_apiAddress_authority
-					)
-				} else { // important else
-					//
-					// strip http:// and https:// prefix here.. there's got to be a better (system) way to do this..
-					// ... probably not a good idea to naively strip "*://" prefix ... or is it?
-					let strippablePrefixes =
-					[
-						"https://",
-						"http://",
-						"//" // we can strip it for https anyway
-					]
-					for (_, prefix) in strippablePrefixes.enumerated() {
-						if mutable_value!.hasPrefix(prefix) {
-							mutable_value = String(mutable_value!.dropFirst(prefix.count)) // overwriting
-						}
-					}
-					//
-					// last-ditch, check fabricated URL parsing - however note that this doesn't get us a huge amount - mostly checking things like whitespace in host
-					let _urlString = "\(HostedMonero.APIClient.apiAddress_scheme)://\(mutable_value!)"
-					let url = URL(string: _urlString)
-					if url == nil {
-						preSubmission_validationError = String(
-							format: NSLocalizedString("Please enter a valid URL authority, e.g. %@.", comment: ""),
-							HostedMonero.APIClient.mymonero_apiAddress_authority
-						)
-					} else {
-						// still valid so far...
-					}
-				}
-			}
-		}
-		if preSubmission_validationError != nil { // exit
-			self.address_inputView.setValidationError(preSubmission_validationError!)
-			//
-			self.set(resolvingIndicatorIsVisible: false) // hide
-			self.view.setNeedsLayout() // for validation err
-			// BUT we're also going to just save it so that the validation error here is displayed to the user.
-			
-			return (didError: true, savableValue: nil) // didError
-		}
-		//
-		// TODO: better verification this is a legit server somehow here before writing value
-		let final_value = mutable_value
-		return (didError: false, savableValue: final_value) // didError = false
 	}
 	//
 	// Runtime - Imperatives - Overrides
@@ -605,42 +490,9 @@ class SettingsFormViewController: UICommonComponents.FormViewController, Setting
 		}
 		//
 		do {
-			// NOTE: if you re-comment the above, make sure to swap these
-			let previousSectionBottomView: UIView = self.displayCurrency_inputView!
-			self.address_label.frame = CGRect(
-				x: label_x,
-				y: previousSectionBottomView.frame.origin.y + previousSectionBottomView.frame.size.height + spacingBetweenFieldsets,
-				width: fullWidth_label_w,
-				height: self.address_label.frame.size.height
-			)
-			self.address_inputView.frame = CGRect(
-				x: input_x,
-				y: self.address_label.frame.origin.y + self.address_label.frame.size.height + UICommonComponents.Form.FieldLabel.marginBelowLabelAboveTextInputView,
-				width: textField_w,
-				height: self.address_inputView.frame.size.height
-			)
-		}
-		let address_inputView_bottomEdge = self.address_inputView.frame.origin.y + (
-			self.address_inputView.validationErrorMessageLabel != nil // if so, do not add address_inputView height redundantly - it's encoded in validationErrorMessageLabel!.frame.origin.y
-				? self.address_inputView.validationErrorMessageLabel!.frame.origin.y + self.address_inputView.validationErrorMessageLabel!.frame.size.height
-				: self.address_inputView.frame.size.height // or else just use the address_inputView height
-		)
-		if self.resolving_activityIndicator.isHidden == false {
-			self.resolving_activityIndicator.frame = CGRect(
-				x: label_x,
-				y: address_inputView_bottomEdge + UICommonComponents.GraphicAndLabelActivityIndicatorView.marginAboveActivityIndicatorBelowFormInput,
-				width: fullWidth_label_w,
-				height: self.resolving_activityIndicator.new_height
-			)
-		}
-		let addressFieldset_bottomEdge = self.resolving_activityIndicator.isHidden ?
-				address_inputView_bottomEdge // to get validation msg label layout support
-			: self.resolving_activityIndicator.frame.origin.y + self.resolving_activityIndicator.frame.size.height
-		//
-		do {
 			self.deleteButton!.frame = CGRect(
 				x: label_x,
-				y: addressFieldset_bottomEdge + spacingBetweenFieldsets,
+				y: self.displayCurrency_inputView.frame.origin.y + spacingBetweenFieldsets + spacingBetweenFieldsets,
 				width: self.deleteButton!.frame.size.width,
 				height: self.deleteButton!.frame.size.height
 			)
@@ -761,73 +613,6 @@ class SettingsFormViewController: UICommonComponents.FormViewController, Setting
 			}
 		)
 		self.navigationController!.present(alertController, animated: true, completion: nil)
-	}
-	//
-	var _timerToSave_addressEditingChanged: Timer?
-	@objc func address_inputView__editingChanged()
-	{
-		self.tearDown_timerToSave_addressEditingChanged()
-		//
-		self.address_inputView.clearValidationError()
-		if self.address_inputView.text == nil || self.address_inputView.text == "" {
-			self.set(resolvingIndicatorIsVisible: false) // no need to show 'connecting…'
-		} else {
-			self.set(resolvingIndicatorIsVisible: true) // show
-		}
-		self.view.setNeedsLayout() // for validation err
-		func _exitAndUnlock(
-			withValidationErr err_str: String?
-		) {
-			if err_str != nil {
-				self.address_inputView.setValidationError(err_str!)
-			}
-			self.set(resolvingIndicatorIsVisible: false) // hide
-			self.view.setNeedsLayout() // for validation err
-		}
-		func _havingUnlocked_revertValueToExistingSettingsValue()
-		{
-			self.address_inputView.text = SettingsController.shared.specificAPIAddressURLAuthority
-			// we don't really want this to cause address_inputView__editingChanged() to be called, although it wouldn't be so bad
-		}
-		//
-		self._timerToSave_addressEditingChanged = Timer.scheduledTimer(
-			withTimeInterval: 0.6, // wait until they're really done typing (probably want to extend this to 1.75s or risk annoyed users if you add back the alert), b/c we'll cause their wallets to be cleared and logged into the new server if a change happened
-			repeats: false,
-			block:
-			{ [unowned self] (timer) in
-				self.tearDown_timerToSave_addressEditingChanged()
-				//
-				let (didError, savableValue) = self._updateValidationErrorForAddressInputView() // also called on init so we get validation error on load
-				if didError {
-					return // not proceeding to save
-				}
-				func _writeValue() -> String? // err_str
-				{
-					let err_str = SettingsController.shared.set(
-						specificAPIAddressURLAuthority: savableValue
-					)
-					// but note! This does not handle reverting the value if failure occurs
-					return err_str
-				}
-				if savableValue == SettingsController.shared.specificAPIAddressURLAuthority {
-					_exitAndUnlock(withValidationErr: nil) // do not clear/re-log-in on wallets if we're, e.g., resetting the password programmatically after the user has canceled deleting all wallets
-					return
-				}
-				let err_str = _writeValue() // this will notify any wallets that they must log out and log back in
-				if err_str != nil { // write failed, so revert value
-					_havingUnlocked_revertValueToExistingSettingsValue() // importantly, revert the input contents, b/c the write failed
-					return
-				}
-				_exitAndUnlock(withValidationErr: err_str)
-			}
-		)
-	}
-	func tearDown_timerToSave_addressEditingChanged()
-	{
-		if self._timerToSave_addressEditingChanged != nil {
-			self._timerToSave_addressEditingChanged!.invalidate()
-			self._timerToSave_addressEditingChanged = nil
-		}
 	}
 	//
 	// Delegation - Protocols - SettingsAppTimeoutAfterSecondsSliderInteractionsDelegate

@@ -2631,7 +2631,7 @@
 					"$(inherited)",
 					"\"${PODS_ROOT}/ofxiOSBoost/libs/boost/ios\"",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.tanyem.XCash;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.tanyem.X-Cash";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG __DISABLED_MOCK_SUCCESSOFTXSUBMISSION";
 				SWIFT_OBJC_BRIDGING_HEADER = "Modules/App/Headers/Bridging-Header.h";
@@ -2667,7 +2667,7 @@
 					"\"${PODS_ROOT}/ofxiOSBoost/libs/boost/ios\"",
 				);
 				LLVM_LTO = YES_THIN;
-				PRODUCT_BUNDLE_IDENTIFIER = com.tanyem.XCash;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.tanyem.X-Cash";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "Modules/App/Headers/Bridging-Header.h";
 				SWIFT_VERSION = 4.2;
@@ -2753,7 +2753,7 @@
 					"\"${PODS_ROOT}/ofxiOSBoost/libs/boost/ios\"",
 				);
 				LLVM_LTO = YES_THIN;
-				PRODUCT_BUNDLE_IDENTIFIER = com.tanyem.XCash;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.tanyem.X-Cash";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "Modules/App/Headers/Bridging-Header.h";
 				SWIFT_VERSION = 4.2;
@@ -2839,7 +2839,7 @@
 					"\"${PODS_ROOT}/ofxiOSBoost/libs/boost/ios\"",
 				);
 				LLVM_LTO = YES_THIN;
-				PRODUCT_BUNDLE_IDENTIFIER = com.tanyem.XCash;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.tanyem.X-Cash";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "Modules/App/Headers/Bridging-Header.h";
 				SWIFT_VERSION = 4.2;
@@ -2934,7 +2934,7 @@
 					"$(inherited)",
 					"\"${PODS_ROOT}/ofxiOSBoost/libs/boost/ios\"",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.tanyem.XCash;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.tanyem.X-Cash";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG __DISABLED_MOCK_SUCCESSOFTXSUBMISSION";
 				SWIFT_OBJC_BRIDGING_HEADER = "Modules/App/Headers/Bridging-Header.h";
