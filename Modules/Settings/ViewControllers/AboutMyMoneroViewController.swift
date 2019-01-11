@@ -64,7 +64,7 @@ class AboutMyMoneroViewController: UIViewController
 			view.font = UIFont.middlingBoldSansSerif
 			view.textColor = UIColor(rgb: 0xFCFBFC)
 			view.text = String(format:
-				NSLocalizedString("Version %@(%@)", comment: ""),
+				NSLocalizedString("Version 0.0.1", comment: ""),
 				Bundle.main.infoDictionary!["CFBundleShortVersionString"] as! String,
 				Bundle.main.infoDictionary!["CFBundleVersion"] as! String
 			)

@@ -54,7 +54,6 @@ class FundsRequestsListViewController: ListViewController
 	{
 		super.startObserving()
 		NotificationCenter.default.addObserver(self, selector: #selector(WalletAppContactActionsCoordinator_didTrigger_requestFundsFromContact(_:)), name: WalletAppContactActionsCoordinator.NotificationNames.didTrigger_requestFundsFromContact.notificationName, object: nil)
-		NotificationCenter.default.addObserver(self, selector: #selector(WalletAppWalletActionsCoordinator_didTrigger_receiveFundsToWallet(_:)), name: WalletAppWalletActionsCoordinator.NotificationNames.didTrigger_receiveFundsToWallet.notificationName, object: nil)
 	}
 	override func configure_navigation_barButtonItems()
 	{
@@ -65,7 +64,6 @@ class FundsRequestsListViewController: ListViewController
 	{
 		super.stopObserving()
 		NotificationCenter.default.removeObserver(self, name: WalletAppContactActionsCoordinator.NotificationNames.didTrigger_requestFundsFromContact.notificationName, object: nil)
-		NotificationCenter.default.removeObserver(self, name: WalletAppWalletActionsCoordinator.NotificationNames.didTrigger_receiveFundsToWallet.notificationName, object: nil)
 	}
 	//
 	// Accessors - Required overrides

@@ -5,7 +5,7 @@
 	<key>CFBundleDevelopmentRegion</key>
 	<string>en</string>
 	<key>CFBundleDisplayName</key>
-	<string>XCash</string>
+	<string>X-Cash</string>
 	<key>CFBundleExecutable</key>
 	<string>$(EXECUTABLE_NAME)</string>
 	<key>CFBundleIdentifier</key>
@@ -36,13 +36,13 @@
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
 	<key>NSCameraUsageDescription</key>
-	<string>The X-CASH app uses your device&apos;s camera to scan physical X-CASH Payment Request QR codes.</string>
+	<string>The X-CASH app uses your device's camera to scan physical X-CASH Payment Request QR codes.</string>
 	<key>NSFaceIDUsageDescription</key>
 	<string>The X-CASH app lets you use Face ID and Touch ID to authenticate for actions after unlocking the app, such as sending money.</string>
 	<key>NSPhotoLibraryAddUsageDescription</key>
-	<string>The X-CASH app uses your device&apos;s photos album to save and to open X-CASH Payment Request QR code image files.</string>
+	<string>The X-CASH app uses your device's photos album to save and to open X-CASH Payment Request QR code image files.</string>
 	<key>NSPhotoLibraryUsageDescription</key>
-	<string>The X-CASH app uses your device&apos;s photos album to save and to open X-CASH Payment Request QR code image files.</string>
+	<string>The X-CASH app uses your device's photos album to save and to open X-CASH Payment Request QR code image files.</string>
 	<key>UIAppFonts</key>
 	<array>
 		<string>Native-Bold.otf</string>

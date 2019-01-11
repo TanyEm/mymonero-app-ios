@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1033B8DB21E65AF40033B75C /* logo_solid_light@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1033B8D921E65AF40033B75C /* logo_solid_light@3x.png */; };
 		6FCFC3C000CEEB8A1E23DB8F /* Pods_MyMonero.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 23FFD28B95E856EC54635727 /* Pods_MyMonero.framework */; };
 		9F0022BB1F3654DC0089400D /* PasswordEntryPresentationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F0022BA1F3654DB0089400D /* PasswordEntryPresentationController.swift */; };
 		9F00B8E11EC276C30040F52A /* MoneroUtils_RequestURIs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F00B8DA1EC276C30040F52A /* MoneroUtils_RequestURIs.swift */; };
@@ -150,7 +151,6 @@
 		9F7298C81F33E1FE00CD59E1 /* SettingsFormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F7298C51F33E1FE00CD59E1 /* SettingsFormViewController.swift */; };
 		9F7298C91F33E1FE00CD59E1 /* SettingsTabNavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F7298C61F33E1FE00CD59E1 /* SettingsTabNavigationViewController.swift */; };
 		9F7298CB1F34148100CD59E1 /* AboutMyMoneroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F7298CA1F34148100CD59E1 /* AboutMyMoneroViewController.swift */; };
-		9F7298CD1F3415F000CD59E1 /* logo_solid_light@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F7298CC1F3415F000CD59E1 /* logo_solid_light@3x.png */; };
 		9F7298CF1F341DD700CD59E1 /* HostedSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F7298CE1F341DD700CD59E1 /* HostedSource.swift */; };
 		9F740D511F10549E0017A20E /* ContactPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F740D501F10549E0017A20E /* ContactPicker.swift */; };
 		9F740D531F12CC330017A20E /* UIView+Hierarchy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F740D521F12CC330017A20E /* UIView+Hierarchy.swift */; };
@@ -324,6 +324,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1033B8D921E65AF40033B75C /* logo_solid_light@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "logo_solid_light@3x.png"; sourceTree = "<group>"; };
 		23FFD28B95E856EC54635727 /* Pods_MyMonero.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyMonero.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5B74196A259183D102DC72F7 /* Pods-MyMonero.profiling.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyMonero.profiling.xcconfig"; path = "Pods/Target Support Files/Pods-MyMonero/Pods-MyMonero.profiling.xcconfig"; sourceTree = "<group>"; };
 		78858D4A99C81FB2BE0B0552 /* Pods-MyMonero.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyMonero.release.xcconfig"; path = "Pods/Target Support Files/Pods-MyMonero/Pods-MyMonero.release.xcconfig"; sourceTree = "<group>"; };
@@ -582,7 +583,6 @@
 		9F7298C51F33E1FE00CD59E1 /* SettingsFormViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsFormViewController.swift; sourceTree = "<group>"; };
 		9F7298C61F33E1FE00CD59E1 /* SettingsTabNavigationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsTabNavigationViewController.swift; sourceTree = "<group>"; };
 		9F7298CA1F34148100CD59E1 /* AboutMyMoneroViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutMyMoneroViewController.swift; sourceTree = "<group>"; };
-		9F7298CC1F3415F000CD59E1 /* logo_solid_light@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "logo_solid_light@3x.png"; sourceTree = "<group>"; };
 		9F7298CE1F341DD700CD59E1 /* HostedSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HostedSource.swift; sourceTree = "<group>"; };
 		9F740D501F10549E0017A20E /* ContactPicker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactPicker.swift; sourceTree = "<group>"; };
 		9F740D521F12CC330017A20E /* UIView+Hierarchy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Hierarchy.swift"; sourceTree = "<group>"; };
@@ -1636,7 +1636,7 @@
 				9FCB927A1F412FA8005852BA /* slider_knob_highlighted@3x.png */,
 				9FCB92761F412EDA005852BA /* slider_knob@3x.png */,
 				9FCB92771F412EDA005852BA /* slider_track@3x.png */,
-				9F7298CC1F3415F000CD59E1 /* logo_solid_light@3x.png */,
+				1033B8D921E65AF40033B75C /* logo_solid_light@3x.png */,
 				9F8E2FF11EE978DF00F89A1D /* icon_tabBar_settings@3x.png */,
 				9F8E2FF21EE978DF00F89A1D /* icon_tabBar_settings__active@3x.png */,
 			);
@@ -2115,6 +2115,7 @@
 				9F8E30461EEDAB9400F89A1D /* wallet-EB8316@3x.png in Resources */,
 				9F33E6E71F1A9F9C00610662 /* balanceDisplayBG_stretchable_darkGrey@3x.png in Resources */,
 				9F9C59ED1F0C316C003B9266 /* highlightableCellBG@3x.png in Resources */,
+				1033B8DB21E65AF40033B75C /* logo_solid_light@3x.png in Resources */,
 				9F8E2FFD1EE978E800F89A1D /* icon_tabBar_contacts__active@3x.png in Resources */,
 				9FAF0EC02088F52600473D97 /* switch_toggle_off@3x.png in Resources */,
 				9F8E30441EEDAB9400F89A1D /* wallet-D975E1@3x.png in Resources */,
@@ -2162,7 +2163,6 @@
 				9F2BFE8A1EF08ABA006B2F7D /* pushButtonBG_utility@3x.png in Resources */,
 				9FD354181F4CA86B0043D769 /* textField_bg_immutable_noErr_stretchable@3x.png in Resources */,
 				9F8E2F9A1EE8837300F89A1D /* icon_tabBar_wallets__active@3x.png in Resources */,
-				9F7298CD1F3415F000CD59E1 /* logo_solid_light@3x.png in Resources */,
 				9F2BFE851EF08ABA006B2F7D /* pushButtonBG_action@3x.png in Resources */,
 				9F22B79D1EFB5B6E0036B02F /* walletColorPicker_selectionIndicator_disabled_stretchable@3x.png in Resources */,
 				9F8E2F5F1EE4B3FB00F89A1D /* Native-Light.otf in Resources */,
