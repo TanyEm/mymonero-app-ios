@@ -38,6 +38,9 @@ import SwiftDate
 // Shared - Cached
 let MoneroJSON_dateFormatter = ISO8601DateFormatter() // we can use this new built in formatter b/c we don't require ms precision
 //
+// Timestampformater
+//
+let XcashTimestempFormater = 0
 // Constants
 struct MoneroConstants
 {
@@ -676,6 +679,8 @@ struct MoneroSpentOutputDescription: Equatable
 	//
 	class func new(withAPIJSONDict dict: [String: Any]) -> MoneroOutputDescription
 	{
+		let numStr = dict["timestamp"] as! Int
+		let tsDouble = Double(numStr)
 		let outputDescription = MoneroOutputDescription(
 			amount: MoneroAmount("\(dict["amount"] as! String)")!,
 			public_key: dict["public_key"] as! String,
@@ -687,9 +692,9 @@ struct MoneroSpentOutputDescription: Equatable
 			tx_pub_key: dict["tx_pub_key"] as! String,
 			tx_prefix_hash: dict["tx_prefix_hash"] as! String,
 			spend_key_images: dict["spend_key_images"] as? [String] ?? [],
-			timestamp: MoneroJSON_dateFormatter.date(from: "\(dict["timestamp"] as! String)")!,
-			//timestamp: NSDate(timeIntervalSince1970: Double(dict["timestamp"] as! String)!) as Date,
+			timestamp: NSDate(timeIntervalSince1970: tsDouble / 1000) as Date,
 			//timestamp: MoneroJSON_dateFormatter.date(from: "\(dict["timestamp"] as! String)")!,
+			//timestamp: NSDate(timeIntervalSince1970: Double(dict["timestamp"] as! String)!) as Date,
 			height: dict["height"] as! UInt64
 		)
 		return outputDescription

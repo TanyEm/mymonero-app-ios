@@ -231,6 +231,8 @@ extension HostedMonero
 						final__paymentId = nil // need to filter these out .. because (afaik) after adding short pid scanning support, the server can't presently filter out short (encrypted) pids on outgoing txs ... not sure this is the optimal or 100% correct solution
 					}
 				}
+				let numStr = tx_dict["timestamp"] as! Int
+				let tsDouble = Double(numStr)
 				let transactionRecord = MoneroHistoricalTransactionRecord(
 					amount: final_tx_amount,
 					totalSent: final_tx_totalSent, // must use this as it's been adjusted for non-own outputs
@@ -239,9 +241,7 @@ extension HostedMonero
 					spent_outputs: MoneroSpentOutputDescription.newArray(
 						withAPIJSONDicts: final_tx_spent_output_dicts // must use this as it's been adjusted for non-own outputs
 					),
-					timestamp: Date(),
-					//timestamp: NSDate(timeIntervalSince1970: Double(tx_dict["timestamp"] as! String)!) as Date,
-					//timestamp: MoneroJSON_dateFormatter.date(from: "\(tx_dict["timestamp"] as! String)")!,
+					timestamp: NSDate(timeIntervalSince1970: tsDouble / 1000) as Date,
 					hash: tx_dict["hash"] as! MoneroTransactionHash,
 					paymentId: final__paymentId,
 					mixin: tx_dict["mixin"] as? UInt,
@@ -925,5 +925,18 @@ extension HostedMonero
 				object: nil
 			)
 		}
+	}
+}
+
+extension Formatter {
+	struct Date {
+		static let iso8601: DateFormatter = {
+			let formatter = DateFormatter()
+			formatter.calendar = Calendar(identifier: .iso8601)
+			formatter.locale = Locale(identifier: "en_US_POSIX")
+			formatter.timeZone = TimeZone(secondsFromGMT: 0)
+			formatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSXXXXX"
+			return formatter
+		}()
 	}
 }
