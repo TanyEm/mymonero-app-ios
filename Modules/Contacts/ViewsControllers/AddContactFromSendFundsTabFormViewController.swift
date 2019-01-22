@@ -94,7 +94,7 @@ class AddContactFromSendFundsTabFormViewController: AddContactFromOtherTabFormVi
 		}
 		super.setup_views()
 		self.set(
-			validationMessage: NSLocalizedString("Your Monero is on its way.", comment: ""),
+			validationMessage: NSLocalizedString("Your X-CASH is on its way.", comment: ""),
 			wantsXButton: true, // could also be false
 			wantsFeedbackGenerated: false
 		)
