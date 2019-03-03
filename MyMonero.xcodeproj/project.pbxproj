@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		1033B8DB21E65AF40033B75C /* logo_solid_light@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1033B8D921E65AF40033B75C /* logo_solid_light@3x.png */; };
+		10A6D315222B63C100117718 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 10A6D317222B63C100117718 /* Localizable.strings */; };
 		6FCFC3C000CEEB8A1E23DB8F /* Pods_MyMonero.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 23FFD28B95E856EC54635727 /* Pods_MyMonero.framework */; };
 		9F0022BB1F3654DC0089400D /* PasswordEntryPresentationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F0022BA1F3654DB0089400D /* PasswordEntryPresentationController.swift */; };
 		9F00B8E11EC276C30040F52A /* MoneroUtils_RequestURIs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F00B8DA1EC276C30040F52A /* MoneroUtils_RequestURIs.swift */; };
@@ -325,6 +326,9 @@
 
 /* Begin PBXFileReference section */
 		1033B8D921E65AF40033B75C /* logo_solid_light@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "logo_solid_light@3x.png"; sourceTree = "<group>"; };
+		10A6D316222B63C100117718 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		10A6D318222B6C9000117718 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Localizable.strings; sourceTree = "<group>"; };
+		10A6D319222B70B300117718 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
 		23FFD28B95E856EC54635727 /* Pods_MyMonero.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyMonero.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5B74196A259183D102DC72F7 /* Pods-MyMonero.profiling.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyMonero.profiling.xcconfig"; path = "Pods/Target Support Files/Pods-MyMonero/Pods-MyMonero.profiling.xcconfig"; sourceTree = "<group>"; };
 		78858D4A99C81FB2BE0B0552 /* Pods-MyMonero.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyMonero.release.xcconfig"; path = "Pods/Target Support Files/Pods-MyMonero/Pods-MyMonero.release.xcconfig"; sourceTree = "<group>"; };
@@ -1440,6 +1444,7 @@
 				9F8E2FDF1EE8A76200F89A1D /* tabBarBGColorImage@3x.png */,
 				9F7ADAFD1EBD2CAF0073C2BB /* LaunchScreen.storyboard */,
 				9F7ADAF81EBD2C1C0073C2BB /* Info.plist */,
+				10A6D317222B63C100117718 /* Localizable.strings */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -2081,6 +2086,8 @@
 			knownRegions = (
 				en,
 				Base,
+				fr,
+				ru,
 			);
 			mainGroup = 9F24AE101EBA7D3A00841BCB;
 			productRefGroup = 9F24AE1A1EBA7D3A00841BCB /* Products */;
@@ -2114,6 +2121,7 @@
 				9F8E303A1EEDAB9400F89A1D /* addButtonIcon_10@3x.png in Resources */,
 				9F8E30461EEDAB9400F89A1D /* wallet-EB8316@3x.png in Resources */,
 				9F33E6E71F1A9F9C00610662 /* balanceDisplayBG_stretchable_darkGrey@3x.png in Resources */,
+				10A6D315222B63C100117718 /* Localizable.strings in Resources */,
 				9F9C59ED1F0C316C003B9266 /* highlightableCellBG@3x.png in Resources */,
 				1033B8DB21E65AF40033B75C /* logo_solid_light@3x.png in Resources */,
 				9F8E2FFD1EE978E800F89A1D /* icon_tabBar_contacts__active@3x.png in Resources */,
@@ -2492,11 +2500,25 @@
 		};
 /* End PBXTargetDependency section */
 
+/* Begin PBXVariantGroup section */
+		10A6D317222B63C100117718 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				10A6D316222B63C100117718 /* en */,
+				10A6D318222B6C9000117718 /* fr */,
+				10A6D319222B70B300117718 /* ru */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
 /* Begin XCBuildConfiguration section */
 		9F24AE3F1EBA7D3A00841BCB /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
@@ -2556,6 +2578,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
@@ -2680,6 +2703,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
@@ -2766,6 +2790,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
@@ -2852,6 +2877,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";

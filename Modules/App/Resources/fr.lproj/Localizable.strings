@@ -1,0 +1,1009 @@
+/* 
+  Localizable.strings
+  MyMonero
+
+  Created by Tanya Podlesnykh on 03/03/2019.
+  Copyright © 2019 MyMonero. All rights reserved.
+*/
+/* {amount} {currency symbol} */
+"%@ %@" = "%1$@ %2$@";
+
+/* {amount} {currency symbol} pending */
+"%@ %@ pending" = "%1$@ %2$@ pending";
+
+/* {amount} {currency symbol} unlocked */
+"%@ %@ unlocked" = "%1$@ %2$@ unlocked";
+
+/* {amount} locked */
+"%@ locked" = "%@ locked";
+
+/* {amount} pending */
+"%@ pending" = "%@ pending";
+
+/* {' or ;'}{amount} {currency symbol} */
+"%@%@ %@ locked" = "%1$@%2$@ %3$@ locked";
+
+/* {number} blocks behind */
+"%d blocks behind" = "%d blocks behind";
+
+/* + {amount} {currency symbol} EST. FEE */
+"+ %@ %@ EST. FEE" = "+ %1$@ %2$@ EST. FEE";
+
+/* No comment provided by engineer. */
+"+ ADD PAYMENT ID" = "+ ADD PAYMENT ID";
+
+/* No comment provided by engineer. */
+"+ CREATE NEW CONTACT" = "+ CREATE NEW CONTACT";
+
+/* No comment provided by engineer. */
+"= %@ %@" = "= %1$@ %2$@";
+
+/* No comment provided by engineer. */
+"?" = "?";
+
+/* No comment provided by engineer. */
+"A specific payment ID" = "A specific payment ID";
+
+/* No comment provided by engineer. */
+"About" = "About";
+
+/* No comment provided by engineer. */
+"About X-CASH" = "About X-CASH";
+
+/* No comment provided by engineer. */
+"Add Wallet" = "Add Wallet";
+
+/* No comment provided by engineer. */
+"Address" = "Address";
+
+/* No comment provided by engineer. */
+"ADDRESS" = "ADDRESS";
+
+/* No comment provided by engineer. */
+"Address and Private Keys" = "Address and Private Keys";
+
+/* Agree and Send {amount} {XCA} */
+"Agree and Send %@ %@" = "Agree and Send %1$@ %2$@";
+
+/* No comment provided by engineer. */
+"AMOUNT" = "AMOUNT";
+
+/* No comment provided by engineer. */
+"An error occurred while creating your wallet. Please try again or contact us for support." = "An error occurred while creating your wallet. Please try again or contact us for support.";
+
+/* No comment provided by engineer. */
+"An extra layer of security\nfor approving certain\nactions after you've\nunlocked the app" = "An extra layer of security\nfor approving certain\nactions after you've\nunlocked the app";
+
+/* No comment provided by engineer. */
+"Any amount" = "Any amount";
+
+/* No comment provided by engineer. */
+"APP TIMEOUT" = "APP TIMEOUT";
+
+/* No comment provided by engineer. */
+"Are you sure you want to clear your locally stored data?\n\nAny wallets will remain permanently on the X-CASH blockchain. At present, local-only data like contacts would not be recoverable." = "Are you sure you want to clear your locally stored data?\n\nAny wallets will remain permanently on the X-CASH blockchain. At present, local-only data like contacts would not be recoverable.";
+
+/* No comment provided by engineer. */
+"Are you sure you want to delete all of your local data?\n\nAny wallets will remain permanently on the X-CASH blockchain but local data such as contacts will not be recoverable at present." = "Are you sure you want to delete all of your local data?\n\nAny wallets will remain permanently on the X-CASH blockchain but local data such as contacts will not be recoverable at present.";
+
+/* No comment provided by engineer. */
+"As a security precaution, please wait a few moments before trying again." = "As a security precaution, please wait a few moments before trying again.";
+
+/* No comment provided by engineer. */
+"Authenticate" = "Authenticate";
+
+/* No comment provided by engineer. */
+"AUTHENTICATE" = "AUTHENTICATE";
+
+/* No comment provided by engineer. */
+"Authenticate to allow X-CASH to perform this action." = "Authenticate to allow X-CASH to perform this action.";
+
+/* No comment provided by engineer. */
+"Based on X-CASH network\nfee estimate (not final).\n\nX-CASH does not charge\na transfer service fee." = "Based on X-CASH network\nfee estimate (not final).\n\nX-CASH does not charge\na transfer service fee.";
+
+/* No comment provided by engineer. */
+"bogus" = "bogus";
+
+/* No comment provided by engineer. */
+"Calculating fee." = "Calculating fee.";
+
+/* No comment provided by engineer. */
+"Can't get decrypted mask from 'rct' hex" = "Can't get decrypted mask from 'rct' hex";
+
+/* No comment provided by engineer. */
+"Cancel" = "Cancel";
+
+/* Change {password/PIN} */
+"Change %@" = "Change %@";
+
+/* No comment provided by engineer. */
+"Choose each word in the correct order." = "Choose each word in the correct order.";
+
+/* No comment provided by engineer. */
+"Choose file" = "Choose file";
+
+/* No comment provided by engineer. */
+"Clear all data" = "Clear all data";
+
+/* No comment provided by engineer. */
+"Close" = "Close";
+
+/* No comment provided by engineer. */
+"Code error while sending. Please contact support." = "Code error while sending. Please contact support.";
+
+/* No comment provided by engineer. */
+"COLOR" = "COLOR";
+
+/* No comment provided by engineer. */
+"Confirm" = "Confirm";
+
+/* No comment provided by engineer. */
+"CONFIRM" = "CONFIRM";
+
+/* No comment provided by engineer. */
+"Confirm Amount" = "Confirm Amount";
+
+/* No comment provided by engineer. */
+"CONFIRMED" = "CONFIRMED";
+
+/* No comment provided by engineer. */
+"CONNECTING…" = "CONNECTING…";
+
+/* No comment provided by engineer. */
+"Constructing transaction." = "Constructing transaction.";
+
+/* No comment provided by engineer. */
+"Contact name or address/domain" = "Contact name or address/domain";
+
+/* No comment provided by engineer. */
+"Contacts" = "Contacts";
+
+/* No comment provided by engineer. */
+"Copied" = "Copied";
+
+/* No comment provided by engineer. */
+"COPY" = "COPY";
+
+/* No comment provided by engineer. */
+"Couldn't add nonce to tx extra" = "Couldn't add nonce to tx extra";
+
+/* No comment provided by engineer. */
+"Couldn't construct integrated address with short payment ID." = "Couldn't construct integrated address with short payment ID.";
+
+/* No comment provided by engineer. */
+"Couldn't decode address" = "Couldn't decode address";
+
+/* Couldn't look up {web address}… {error} */
+"Couldn't look up %@… %@" = "Couldn't look up %1$@… %2$@";
+
+/* Couldn't look up {web address}… No Internet Connection Found */
+"Couldn't look up %@… No Internet Connection Found" = "Couldn't look up %@… No Internet Connection Found";
+
+/* No comment provided by engineer. */
+"Couldn't resolve this OpenAlias address." = "Couldn't resolve this OpenAlias address.";
+
+/* No comment provided by engineer. */
+"Couldn't validate destination X-CASH address." = "Couldn't validate destination X-CASH address.";
+
+/* No comment provided by engineer. */
+"Create new wallet" = "Create new wallet";
+
+/* No comment provided by engineer. */
+"Create PIN/Password" = "Create PIN/Password";
+
+/* No comment provided by engineer. */
+"Creating a wallet" = "Creating a wallet";
+
+/* No comment provided by engineer. */
+"Currency" = "Currency";
+
+/* Currency selector for\ndisplay purposes only.\nThe app will send {XCA symbol}.\n\nRate providers include\n{cryptocompare.com domain}. */
+"Currency selector for\ndisplay purposes only.\nThe app will send %@.\n\nRate providers include\n%@." = "Currency selector for\ndisplay purposes only.\nThe app will send %1$@.\n\nRate providers include\n%2$@.";
+
+/* No comment provided by engineer. */
+"Currently sending funds. Please try again when complete." = "Currently sending funds. Please try again when complete.";
+
+/* No comment provided by engineer. */
+"Date" = "Date";
+
+/* No comment provided by engineer. */
+"Delete" = "Delete";
+
+/* No comment provided by engineer. */
+"Delete Everything" = "Delete Everything";
+
+/* No comment provided by engineer. */
+"Delete everything?" = "Delete everything?";
+
+/* No comment provided by engineer. */
+"Delete this contact?" = "Delete this contact?";
+
+/* No comment provided by engineer. */
+"Delete this contact? This cannot be undone." = "Delete this contact? This cannot be undone.";
+
+/* No comment provided by engineer. */
+"Delete this request?" = "Delete this request?";
+
+/* No comment provided by engineer. */
+"Delete this request? This cannot be undone." = "Delete this request? This cannot be undone.";
+
+/* Description: \"{X-CASH request message description}\" */
+"Description: \"%@\"" = "Description: \"%@\"";
+
+/* No comment provided by engineer. */
+"DETAILS" = "DETAILS";
+
+/* No comment provided by engineer. */
+"Detected" = "Detected";
+
+/* No comment provided by engineer. */
+"DISPLAY" = "DISPLAY";
+
+/* No comment provided by engineer. */
+"DNSSEC status not available." = "DNSSEC status not available.";
+
+/* No comment provided by engineer. */
+"DNSSEC validation failed: Chain of trust could not be built from trust anchor to response (\"Insecure\")." = "DNSSEC validation failed: Chain of trust could not be built from trust anchor to response (\"Insecure\").";
+
+/* No comment provided by engineer. */
+"DNSSEC validation failed: No valid trust anchor that can be used to determine if response secure (\"Indeterminate\")." = "DNSSEC validation failed: No valid trust anchor that can be used to determine if response secure (\"Indeterminate\").";
+
+/* No comment provided by engineer. */
+"DNSSEC validation failed: Possible expired or missing signatures (\"Bogus\")." = "DNSSEC validation failed: Possible expired or missing signatures (\"Bogus\").";
+
+/* No comment provided by engineer. */
+"DNSSEC validation failed: Status not able to be determined" = "DNSSEC validation failed: Status not able to be determined";
+
+/* No comment provided by engineer. */
+"DNSSEC validation failed: Unrecognized error." = "DNSSEC validation failed: Unrecognized error.";
+
+/* No comment provided by engineer. */
+"Domain's TXT records had OpenAlias prefix but not a valid X-CASH address." = "Domain's TXT records had OpenAlias prefix but not a valid X-CASH address.";
+
+/* No comment provided by engineer. */
+"Don't Save" = "Don't Save";
+
+/* No comment provided by engineer. */
+"Done" = "Done";
+
+/* No comment provided by engineer. */
+"Each X-CASH wallet gets a unique word-sequence called a mnemonic." = "Each X-CASH wallet gets a unique word-sequence called a mnemonic.";
+
+/* No comment provided by engineer. */
+"Edit" = "Edit";
+
+/* No comment provided by engineer. */
+"Edit Contact" = "Edit Contact";
+
+/* No comment provided by engineer. */
+"Edit Wallet" = "Edit Wallet";
+
+/* No comment provided by engineer. */
+"EMOJI" = "EMOJI";
+
+/* Enter {PIN/password} */
+"Enter %@" = "Enter %@";
+
+/* No comment provided by engineer. */
+"Enter address, email, or domain" = "Enter address, email, or domain";
+
+/* No comment provided by engineer. */
+"Enter contact name" = "Enter contact name";
+
+/* No comment provided by engineer. */
+"Enter name" = "Enter name";
+
+/* No comment provided by engineer. */
+"ENTER PAYMENT ID OR" = "ENTER PAYMENT ID OR";
+
+/* No comment provided by engineer. */
+"Error" = "Error";
+
+/* No comment provided by engineer. */
+"Error code %d - %@" = "Error code %1$d - %2$@";
+
+/* No comment provided by engineer. */
+"Error: Contact Support" = "Error: Contact Support";
+
+/* No comment provided by engineer. */
+"Fetching decoy outputs." = "Fetching decoy outputs.";
+
+/* No comment provided by engineer. */
+"Fetching latest balance." = "Fetching latest balance.";
+
+/* No comment provided by engineer. */
+"For convenience you may send the fee from X-CASH here, or the official CLI or GUI tools, or any other X-CASH wallet.\n\nPlease be sure to use the exact payment ID below, so the server knows which wallet to import." = "For convenience you may send the fee from X-CASH here, or the official CLI or GUI tools, or any other X-CASH wallet.\n\nPlease be sure to use the exact payment ID below, so the server knows which wallet to import.";
+
+/* No comment provided by engineer. */
+"For larger amounts and enhanced privacy, make a cold-storage wallet or set your own server in Preferences." = "For larger amounts and enhanced privacy, make a cold-storage wallet or set your own server in Preferences.";
+
+/* No comment provided by engineer. */
+"For your reference" = "For your reference";
+
+/* Forgot {PIN/password}? */
+"Forgot %@?" = "Forgot %@?";
+
+/* No comment provided by engineer. */
+"Forgot?" = "Forgot?";
+
+/* No comment provided by engineer. */
+"FROM" = "FROM";
+
+/* No comment provided by engineer. */
+"From your existing wallet" = "From your existing wallet";
+
+/* No comment provided by engineer. */
+"GENERATE ONE" = "GENERATE ONE";
+
+/* No comment provided by engineer. */
+"Go" = "Go";
+
+/* No comment provided by engineer. */
+"GOT IT!" = "GOT IT!";
+
+/* No comment provided by engineer. */
+"high" = "high";
+
+/* No comment provided by engineer. */
+"How would you like to\nadd a wallet?" = "How would you like to\nadd a wallet?";
+
+/* Idle time before your {PIN/password} is required */
+"Idle time before your %@ is required" = "Idle time before your %@ is required";
+
+/* No comment provided by engineer. */
+"If you don't have X-CASH installed, download it from %@" = "If you don't have X-CASH installed, download it from %@";
+
+/* No comment provided by engineer. */
+"If you have X-CASH installed, use this link to send the funds: " = "If you have X-CASH installed, use this link to send the funds: ";
+
+/* No comment provided by engineer. */
+"If you save it to an insecure location, copy, screenshot, or email it, it may be viewable by other apps." = "If you save it to an insecure location, copy, screenshot, or email it, it may be viewable by other apps.";
+
+/* No comment provided by engineer. */
+"Import Transactions" = "Import Transactions";
+
+/* No comment provided by engineer. */
+"IMPORT TRANSACTIONS" = "IMPORT TRANSACTIONS";
+
+/* No comment provided by engineer. */
+"Important" = "Important";
+
+/* No comment provided by engineer. */
+"Importing your wallet means the server will scan the entire X-CASH blockchain for your wallet's past transactions, then stay up-to-date.\n\nAs this process places heavy load on the server, import is triggered by sending a fee with the specific payment ID below to the server at e.g. %@." = "Importing your wallet means the server will scan the entire X-CASH blockchain for your wallet's past transactions, then stay up-to-date.\n\nAs this process places heavy load on the server, import is triggered by sending a fee with the specific payment ID below to the server at e.g. %@.";
+
+/* No comment provided by engineer. */
+"Incorrect password" = "Incorrect password";
+
+/* No comment provided by engineer. */
+"Incorrect PIN" = "Incorrect PIN";
+
+/* No comment provided by engineer. */
+"indeterminate" = "indeterminate";
+
+/* No comment provided by engineer. */
+"Input amount overflow" = "Input amount overflow";
+
+/* No comment provided by engineer. */
+"insecure" = "insecure";
+
+/* No comment provided by engineer. */
+"Integrated Address (derived)" = "Integrated Address (derived)";
+
+/* No comment provided by engineer. */
+"Invalid address" = "Invalid address";
+
+/* No comment provided by engineer. */
+"Invalid commit or mask on output rct" = "Invalid commit or mask on output rct";
+
+/* No comment provided by engineer. */
+"Invalid destination address" = "Invalid destination address";
+
+/* No comment provided by engineer. */
+"Invalid payment ID" = "Invalid payment ID";
+
+/* No comment provided by engineer. */
+"Invalid pub key" = "Invalid pub key";
+
+/* No comment provided by engineer. */
+"Invalid secret keys" = "Invalid secret keys";
+
+/* No comment provided by engineer. */
+"It's the only way to regain access to your funds if you delete the app." = "It's the only way to regain access to your funds if you delete the app.";
+
+/* No comment provided by engineer. */
+"Keep it secret and safe" = "Keep it secret and safe";
+
+/* No comment provided by engineer. */
+"Language" = "Language";
+
+/* No comment provided by engineer. */
+"Leave blank to use X-CASH" = "Leave blank to use X-CASH";
+
+/* No comment provided by engineer. */
+"LOAD ERROR" = "LOAD ERROR";
+
+/* No comment provided by engineer. */
+"LOADING…" = "LOADING…";
+
+/* No comment provided by engineer. */
+"Loading…" = "Loading…";
+
+/* No comment provided by engineer. */
+"Log Into Your Wallet" = "Log Into Your Wallet";
+
+/* No comment provided by engineer. */
+"Log out" = "Log out";
+
+/* No comment provided by engineer. */
+"Logging Out" = "Logging Out";
+
+/* No comment provided by engineer. */
+"LOGIN ERROR" = "LOGIN ERROR";
+
+/* No comment provided by engineer. */
+"low" = "low";
+
+/* No comment provided by engineer. */
+"MAX" = "MAX";
+
+/* No comment provided by engineer. */
+"medium" = "medium";
+
+/* No comment provided by engineer. */
+"Memo" = "Memo";
+
+/* No comment provided by engineer. */
+"MEMO" = "MEMO";
+
+/* Memo: \"{X-CASH request message memo}\" */
+"Memo: \"%@\"" = "Memo: \"%@\"";
+
+/* No comment provided by engineer. */
+"Message for Requestee" = "Message for Requestee";
+
+/* No comment provided by engineer. */
+"Mix RCT outs missing commit" = "Mix RCT outs missing commit";
+
+/* No comment provided by engineer. */
+"X-CASH ADDRESS" = "X-CASH ADDRESS";
+
+/* No comment provided by engineer. */
+"X-CASH makes transactions\nwith your \"available outputs\",\nso part of your balance will\nbe briefly locked and then\nreturned as change." = "X-CASH makes transactions\nwith your \"available outputs\",\nso part of your balance will\nbe briefly locked and then\nreturned as change.";
+
+/* No comment provided by engineer. */
+"X-CASH Request" = "X-CASH Request";
+
+/* Multiple {currency symbol} target addresses found for domain {web address} */
+"Multiple %@ target addresses found for domain %@" = "Multiple %1$@ target addresses found for domain %2$@";
+
+/* No comment provided by engineer. */
+"X-CASH" = "X-CASH";
+
+/* No comment provided by engineer. */
+"N/A" = "N/A";
+
+/* No comment provided by engineer. */
+"NAME" = "NAME";
+
+/* No comment provided by engineer. */
+"Never" = "Never";
+
+/* No comment provided by engineer. */
+"Nevermind" = "Nevermind";
+
+/* No comment provided by engineer. */
+"New Contact" = "New Contact";
+
+/* No comment provided by engineer. */
+"New PIN/Password" = "New PIN/Password";
+
+/* No comment provided by engineer. */
+"New Request" = "New Request";
+
+/* No comment provided by engineer. */
+"New Wallet" = "New Wallet";
+
+/* No comment provided by engineer. */
+"Next" = "Next";
+
+/* No comment provided by engineer. */
+"No destinations provided" = "No destinations provided";
+
+/* No comment provided by engineer. */
+"No DNS records found during OA address lookup." = "No DNS records found during OA address lookup.";
+
+/* No comment provided by engineer. */
+"No Internet Connection Found" = "No Internet Connection Found";
+
+/* No comment provided by engineer. */
+"No X-CASH request info" = "No X-CASH request info";
+
+/* No comment provided by engineer. */
+"No recipient_address found" = "No recipient_address found";
+
+/* No comment provided by engineer. */
+"No such DNS name found" = "No such DNS name found";
+
+/* No comment provided by engineer. */
+"No such DNS record found" = "No such DNS record found";
+
+/* No valid OpenAlias records with prefix {currency symbol} found for {web address} */
+"No valid OpenAlias records with prefix %@ found for %@" = "No valid OpenAlias records with prefix %1$@ found for %2$@";
+
+/* No comment provided by engineer. */
+"None" = "None";
+
+/* No comment provided by engineer. */
+"Not an OpenAlias address" = "Not an OpenAlias address";
+
+/* No comment provided by engineer. */
+"Not enough outputs for mixing" = "Not enough outputs for mixing";
+
+/* No comment provided by engineer. */
+"Not yet implemented" = "Not yet implemented";
+
+/* No comment provided by engineer. */
+"Note about the transaction" = "Note about the transaction";
+
+/* No comment provided by engineer. */
+"NOTE: Don't transfer your wallet's balance to this address. (This isn't your new address.)" = "NOTE: Don't transfer your wallet's balance to this address. (This isn't your new address.)";
+
+/* No comment provided by engineer. */
+"NOTE: This is the only way to access your wallet if you switch devices, use another X-CASH wallet app, or lose your data." = "NOTE: This is the only way to access your wallet if you switch devices, use another X-CASH wallet app, or lose your data.";
+
+/* No comment provided by engineer. */
+"OK" = "OK";
+
+/* No comment provided by engineer. */
+"Open" = "Open";
+
+/* No comment provided by engineer. */
+"OpenAlias address no longer lists X-CASH address" = "OpenAlias address no longer lists X-CASH address";
+
+/* No comment provided by engineer. */
+"Optional" = "Optional";
+
+/* No comment provided by engineer. */
+"optional" = "optional";
+
+/* No comment provided by engineer. */
+"Or, use " = "Or, use ";
+
+/* No comment provided by engineer. */
+"Output amount overflow" = "Output amount overflow";
+
+/* No comment provided by engineer. */
+"Password reset is not possible,\nas your data is encrypted and local.\n\nIf you can't remember it, you'll need\nto clear all data and re-import your\nwallets to continue." = "Password reset is not possible,\nas your data is encrypted and local.\n\nIf you can't remember it, you'll need\nto clear all data and re-import your\nwallets to continue.";
+
+/* No comment provided by engineer. */
+"Pay" = "Pay";
+
+/* No comment provided by engineer. */
+"PAYMENT ID" = "PAYMENT ID";
+
+/* No comment provided by engineer. */
+"Payment ID" = "Payment ID";
+
+/* No comment provided by engineer. */
+"PAYMENT ID (REQUIRED)" = "PAYMENT ID (REQUIRED)";
+
+/* No comment provided by engineer. */
+"Payment ID must be blank when using a subaddress" = "Payment ID must be blank when using a subaddress";
+
+/* No comment provided by engineer. */
+"Payment ID must be blank when using an integrated address" = "Payment ID must be blank when using an integrated address";
+
+/* No comment provided by engineer. */
+"PENDING" = "PENDING";
+
+/* No comment provided by engineer. */
+"PIN OR PASSWORD" = "PIN OR PASSWORD";
+
+/* No comment provided by engineer. */
+"Please double-check\nyour recipient info as\nX-CASH transfers are\nnot yet reversible." = "Please double-check\nyour recipient info as\nX-CASH transfers are\nnot yet reversible.";
+
+/* No comment provided by engineer. */
+"Please ensure X-CASH can access your device camera via iOS Settings > Privacy." = "Please ensure X-CASH can access your device camera via iOS Settings > Privacy.";
+
+/* No comment provided by engineer. */
+"Please ensure you have allowed X-CASH to access your Photos." = "Please ensure you have allowed X-CASH to access your Photos.";
+
+/* No comment provided by engineer. */
+"Please enter a name for this contact." = "Please enter a name for this contact.";
+
+/* No comment provided by engineer. */
+"Please enter a valid amount  X-CASH." = "Please enter a valid amount  X-CASH.";
+
+/* No comment provided by engineer. */
+"Please enter a valid amount of X-CASH." = "Please enter a valid amount of X-CASH.";
+
+/* No comment provided by engineer. */
+"Please enter a valid amount to send." = "Please enter a valid amount to send.";
+
+/* No comment provided by engineer. */
+"Please enter a valid X-CASH address" = "Please enter a valid X-CASH address";
+
+/* No comment provided by engineer. */
+"Please enter a valid payment ID." = "Please enter a valid payment ID.";
+
+/* Please enter a valid URL authority, e.g. {API url example}. */
+"Please enter a valid URL authority, e.g. %@." = "Please enter a valid URL authority, e.g. %@.";
+
+/* No comment provided by engineer. */
+"Please enter an address for this contact." = "Please enter an address for this contact.";
+
+/* No comment provided by engineer. */
+"Please enter an amount greater than zero." = "Please enter an amount greater than zero.";
+
+/* No comment provided by engineer. */
+"Please select a contact or clear the contact field below to generate this request." = "Please select a contact or clear the contact field below to generate this request.";
+
+/* No comment provided by engineer. */
+"Please specify the recipient of this transfer." = "Please specify the recipient of this transfer.";
+
+/* No comment provided by engineer. */
+"Preferences" = "Preferences";
+
+/* No comment provided by engineer. */
+"Priority" = "Priority";
+
+/* No comment provided by engineer. */
+"QR Code" = "QR Code";
+
+/* No comment provided by engineer. */
+"Receive" = "Receive";
+
+/* No comment provided by engineer. */
+"Receive X-CASH" = "Receive X-CASH";
+
+/* No comment provided by engineer. */
+"RECEIVE X-CASH AT" = "RECEIVE X-CASH AT";
+
+/* No comment provided by engineer. */
+"REJECTED" = "REJECTED";
+
+/* No comment provided by engineer. */
+"Request" = "Request";
+
+/* No comment provided by engineer. */
+"Request Link" = "Request Link";
+
+/* No comment provided by engineer. */
+"REQUEST X-CASH FROM" = "REQUEST X-CASH FROM";
+
+/* No comment provided by engineer. */
+"Request URI had no target address" = "Request URI had no target address";
+
+/* No comment provided by engineer. */
+"Request URI has non-X-CASH protocol" = "Request URI has non-X-CASH protocol";
+
+/* No comment provided by engineer. */
+"RESOLVING…" = "RESOLVING…";
+
+/* No comment provided by engineer. */
+"Result fee not equal to given fee" = "Result fee not equal to given fee";
+
+/* No comment provided by engineer. */
+"Ring size" = "Ring size";
+
+/* No comment provided by engineer. */
+"Save" = "Save";
+
+/* No comment provided by engineer. */
+"Save Contact" = "Save Contact";
+
+/* No comment provided by engineer. */
+"SAVE THIS ADDRESS AS A CONTACT?" = "SAVE THIS ADDRESS AS A CONTACT?";
+
+/* No comment provided by engineer. */
+"Saved Photos Album not available" = "Saved Photos Album not available";
+
+/* No comment provided by engineer. */
+"Scan Code to Pay" = "Scan Code to Pay";
+
+/* No comment provided by engineer. */
+"Scan QR Code" = "Scan QR Code";
+
+/* Scan this code to send {amount} {currency symbol} in X-CASH to {address}. */
+"Scan this code to send %@ %@ in X-CASH to %@." = "Scan this code to send %1$@ %2$@ in X-CASH to %3$@.";
+
+/* Scan this code to send {amount} {XCA} to {address}. */
+"Scan this code to send %@ %@ to %@." = "Scan this code to send %1$@ %2$@ to %3$@.";
+
+/* Scan this code to send X-CASH to {address}. */
+"Scan this code to send X-CASH to %@." = "Scan this code to send X-CASH to %@.";
+
+/* Scan to import {address}. */
+"Scan to import %@." = "Scan to import %@.";
+
+/* No comment provided by engineer. */
+"Scan to Import Contact" = "Scan to Import Contact";
+
+/* No comment provided by engineer. */
+"SCANNING BLOCKCHAIN…" = "SCANNING BLOCKCHAIN…";
+
+/* No comment provided by engineer. */
+"SCANNING…" = "SCANNING…";
+
+/* No comment provided by engineer. */
+"Secret Key" = "Secret Key";
+
+/* No comment provided by engineer. */
+"Secret Mnemonic" = "Secret Mnemonic";
+
+/* No comment provided by engineer. */
+"SECRET MNEMONIC" = "SECRET MNEMONIC";
+
+/* No comment provided by engineer. */
+"Secret Spend Key" = "Secret Spend Key";
+
+/* No comment provided by engineer. */
+"Secret View Key" = "Secret View Key";
+
+/* No comment provided by engineer. */
+"secure" = "secure";
+
+/* No comment provided by engineer. */
+"Send" = "Send";
+
+/* Send {amount} {XCA}? */
+"Send %@ %@?" = "Send %1$@ %2$@?";
+
+/* No comment provided by engineer. */
+"Send X-CACH" = "Send X-CASH";
+
+/* Sending {amount} XCA… */
+"Sending %@ XCA…" = "Sending %@ XCA…";
+
+/* No comment provided by engineer. */
+"Sending wallet balance…" = "Sending wallet balance…";
+
+/* No comment provided by engineer. */
+"Sent!" = "Sent!";
+
+/* No comment provided by engineer. */
+"SERVER URL" = "SERVER URL";
+
+/* No comment provided by engineer. */
+"SHARE" = "SHARE";
+
+/* No comment provided by engineer. */
+"So we know it's you" = "So we know it's you";
+
+/* No comment provided by engineer. */
+"Some X-CASH is arriving." = "Some X-CASH is arriving.";
+
+/* Someone has requested a {X-CASH} payment of {amount} {currency symbol}. */
+"Someone has requested a %@ payment of %@ %@." = "Someone has requested a %1$@ payment of %2$@ %3$@.";
+
+/* Someone has requested a {X-CASH} payment. */
+"Someone has requested a %@ payment." = "Someone has requested a %@ payment.";
+
+/* No comment provided by engineer. */
+"SPEND KEY" = "SPEND KEY";
+
+/* No comment provided by engineer. */
+"Spendable balance too low" = "Spendable balance too low";
+
+/* Spendable balance too low. Have {amount} {XCA}; need {amount} {XCA}. */
+"Spendable balance too low. Have %@ %@; need %@ %@." = "Spendable balance too low. Have %1$@ %2$@; need %3$@ %4$@.";
+
+/* No comment provided by engineer. */
+"Start over" = "Start over";
+
+/* No comment provided by engineer. */
+"Submitting transaction." = "Submitting transaction.";
+
+/* No comment provided by engineer. */
+"That’s not right. You can try again or start over with a new mnemonic." = "That’s not right. You can try again or start over with a new mnemonic.";
+
+/* No comment provided by engineer. */
+"The amount to send must be greater than zero." = "The amount to send must be greater than zero.";
+
+/* No comment provided by engineer. */
+"The amount you've entered is too low" = "The amount you've entered is too low";
+
+/* No comment provided by engineer. */
+"The amount you've entered is too low." = "The amount you've entered is too low.";
+
+/* No comment provided by engineer. */
+"This private spend key is never sent to the X-CASH server." = "This private spend key is never sent to the X-CASH server.";
+
+/* No comment provided by engineer. */
+"This private view key and the wallet address are the only things sent to the X-CASH server." = "This private view key and the wallet address are the only things sent to the X-CASH server.";
+
+/* This requires a one-time import fee of {amount} XCA */
+"This requires a one-time import fee of %@ XCA" = "This requires a one-time import fee of %@ XCA";
+
+/* No comment provided by engineer. */
+"This secret mnemonic is never sent to the X-CASH server." = "This secret mnemonic is never sent to the X-CASH server.";
+
+/* No comment provided by engineer. */
+"This wallet must first be imported." = "This wallet must first be imported.";
+
+/* Though {fiat currency symbol} is selected, the app will send {XCA symbol}. (This is not an exchange.)\n\nRate providers include {cryptocompare domain}. Neither accuracy or favorability are guaranteed. Use at your own risk. */
+"Though %@ is selected, the app will send %@. (This is not an exchange.)\n\nRate providers include %@. Neither accuracy or favorability are guaranteed. Use at your own risk." = "Though %1$@ is selected, the app will send %2$@. (This is not an exchange.)\n\nRate providers include %3$@. Neither accuracy or favorability are guaranteed. Use at your own risk.";
+
+/* No comment provided by engineer. */
+"TO" = "TO";
+
+/* No comment provided by engineer. */
+"To" = "To";
+
+/* To \"{wallet name}\" */
+"To \"%@\"" = "To \"%@\"";
+
+/* No comment provided by engineer. */
+"To show wallet secrets" = "To show wallet secrets";
+
+/* No comment provided by engineer. */
+"Total" = "Total";
+
+/* No comment provided by engineer. */
+"Transaction currently locked: " = "Transaction currently locked: ";
+
+/* No comment provided by engineer. */
+"Transaction ID" = "Transaction ID";
+
+/* No comment provided by engineer. */
+"Transaction is unlocked" = "Transaction is unlocked";
+
+/* No comment provided by engineer. */
+"Transaction not constructed" = "Transaction not constructed";
+
+/* No comment provided by engineer. */
+"Transaction too big" = "Transaction too big";
+
+/* No comment provided by engineer. */
+"TRANSFER" = "TRANSFER";
+
+/* No comment provided by engineer. */
+"Try again" = "Try again";
+
+/* No comment provided by engineer. */
+"Unable to add percent encoding to QR URI" = "Unable to add percent encoding to QR URI";
+
+/* No comment provided by engineer. */
+"Unable to construct transaction after many attempts." = "Unable to construct transaction after many attempts.";
+
+/* Unable to decode that URL: {error} */
+"Unable to decode that URL: %@" = "Unable to decode that URL: %@";
+
+/* No comment provided by engineer. */
+"Unable to find data in response from server." = "Unable to find data in response from server.";
+
+/* No comment provided by engineer. */
+"Unable to find JSON in response from server." = "Unable to find JSON in response from server.";
+
+/* No comment provided by engineer. */
+"Unable to find message string in image's QR code." = "Unable to find message string in image's QR code.";
+
+/* No comment provided by engineer. */
+"Unable to find QR code data in image" = "Unable to find QR code data in image";
+
+/* No comment provided by engineer. */
+"Unable to get capture device" = "Unable to get capture device";
+
+/* No comment provided by engineer. */
+"Unable to load that wallet." = "Unable to load that wallet.";
+
+/* No comment provided by engineer. */
+"Unable to log into that wallet." = "Unable to log into that wallet.";
+
+/* Unable to use the result of decoding that QR code: {error} */
+"Unable to use the result of decoding that QR code: %@" = "Unable to use the result of decoding that QR code: %@";
+
+/* No comment provided by engineer. */
+"undetermined" = "undetermined";
+
+/* No comment provided by engineer. */
+"Unexpected error domain from DNS lookup" = "Unexpected error domain from DNS lookup";
+
+/* No comment provided by engineer. */
+"Unexpectedly found multiple QR features in image. This may be a bug." = "Unexpectedly found multiple QR features in image. This may be a bug.";
+
+/* No comment provided by engineer. */
+"Unknown" = "Unknown";
+
+/* No comment provided by engineer. */
+"Unknown error" = "Unknown error";
+
+/* No comment provided by engineer. */
+"Unless you use an OpenAlias or integrated address, if you don't provide a payment ID, one will be generated." = "Unless you use an OpenAlias or integrated address, if you don't provide a payment ID, one will be generated.";
+
+/* No comment provided by engineer. */
+"unrecognized" = "unrecognized";
+
+/* No comment provided by engineer. */
+"Unrecognized currency on funds request" = "Unrecognized currency on funds request";
+
+/* No comment provided by engineer. */
+"Unrecognized DNS lookup error. Code %d" = "Unrecognized DNS lookup error. Code %d";
+
+/* No comment provided by engineer. */
+"Unrecognized URI format" = "Unrecognized URI format";
+
+/* No comment provided by engineer. */
+"Use Camera" = "Use Camera";
+
+/* No comment provided by engineer. */
+"Use existing wallet" = "Use existing wallet";
+
+/* No comment provided by engineer. */
+"Use it like an actual wallet" = "Use it like an actual wallet";
+
+/* No comment provided by engineer. */
+"Use Touch/Face ID" = "Use Touch/Face ID";
+
+/* No comment provided by engineer. */
+"Used to encrypt your on-device data, and to lock your app when idle. Don't forget it!\nSix character minimum." = "Used to encrypt your on-device data, and to lock your app when idle. Don't forget it!\nSix character minimum.";
+
+/* No comment provided by engineer. */
+"Verify your mnemonic" = "Verify your mnemonic";
+
+/* Version {short version}({bundle version}) */
+"Version %@(%@)" = "Version %1$@(%2$@)";
+
+/* No comment provided by engineer. */
+"very high" = "very high";
+
+/* No comment provided by engineer. */
+"VIEW KEY" = "VIEW KEY";
+
+/* No comment provided by engineer. */
+"View on GitHub" = "View on GitHub";
+
+/* No comment provided by engineer. */
+"WALLET NAME" = "WALLET NAME";
+
+/* No comment provided by engineer. */
+"Wallets" = "Wallets";
+
+/* No comment provided by engineer. */
+"Welcome to X-CASH!\nLet's get started." = "Welcome to X-CASH!\nLet's get started.";
+
+/* No comment provided by engineer. */
+"When sending" = "When sending";
+
+/* Will be unlocked {duration of time plus 'from now'} */
+"Will be unlocked %@" = "Will be unlocked %@";
+
+/* Will be unlocked in {number} blocks, about {duration of time plus 'from now'} */
+"Will be unlocked in %d blocks, about %@" = "Will be unlocked in %1$d blocks, about %2$@";
+
+/* No comment provided by engineer. */
+"Write down your mnemonic" = "Write down your mnemonic";
+
+/* No comment provided by engineer. */
+"Wrong number of mix outputs provided" = "Wrong number of mix outputs provided";
+
+/* No comment provided by engineer. */
+"XCA Address (cached)" = "XCA Address (cached)";
+
+/* No comment provided by engineer. */
+"You are about to log out of a wallet.\n\nMake sure you saved your mnemonic! It can be found by clicking the arrow next to Address on the Wallet screen. You will need your mnemonic to recover access to this wallet.\n\nAre you sure you want to log out of this wallet?" = "You are about to log out of a wallet.\n\nMake sure you saved your mnemonic! It can be found by clicking the arrow next to Address on the Wallet screen. You will need your mnemonic to recover access to this wallet.\n\nAre you sure you want to log out of this wallet?";
+
+/* No comment provided by engineer. */
+"You can pay the X-CASH\nnetwork a higher fee to\nhave your transfers\nconfirmed faster." = "You can pay the X-CASH\nnetwork a higher fee to\nhave your transfers\nconfirmed faster.";
+
+/* No comment provided by engineer. */
+"You don't have any\ntransactions yet." = "You don't have any\ntransactions yet.";
+
+/* No comment provided by engineer. */
+"You haven't created any\ncontacts yet." = "You haven't created any\ncontacts yet.";
+
+/* No comment provided by engineer. */
+"You haven't made any\nrequests yet." = "You haven't made any\nrequests yet.";
+
+/* No comment provided by engineer. */
+"You'll confirm this sequence on the next screen." = "You'll confirm this sequence on the next screen.";
+
+/* No comment provided by engineer. */
+"Your X-CASH is on its way." = "Your X-CASH is on its way.";
+
+/* No comment provided by engineer. */
+"Your wallet's public address" = "Your wallet's public address";
+
+/* ~ {amount} {currency symbol} */
+"~ %@ %@" = "~ %1$@ %2$@";
+
