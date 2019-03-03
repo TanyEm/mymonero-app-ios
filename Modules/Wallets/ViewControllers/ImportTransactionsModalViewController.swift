@@ -315,7 +315,7 @@ extension ImportTransactionsModal
 					String(
 						format: NSLocalizedString(
 							"This requires a one-time import fee of %@ XCASH", // no break spaces btwn of and amt and amt and ccy
-							comment: ""
+							comment: "This requires a one-time import fee of {amount} XCASH"
 						),
 						formatted_importFee
 					) + (

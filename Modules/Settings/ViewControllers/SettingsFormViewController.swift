@@ -517,13 +517,13 @@ class SettingsFormViewController: UICommonComponents.FormViewController, Setting
 		// TODO: This configuration is not the optimal place to do this - change to upon a notification from PasswordController
 		do { // config change pw btn text
 			self.changePasswordButton.setTitle(
-				NSLocalizedString("Change \(PasswordController.shared.passwordType.capitalized_humanReadableString)", comment: ""),
+				String(format: NSLocalizedString("Change %@", comment: "Change {password/PIN}"), PasswordController.shared.passwordType.capitalized_humanReadableString),
 				for: .normal
 			)
 			self.appTimeoutAfterS_fieldAccessoryMessageLabel!.text = String(
 				format: NSLocalizedString(
 					"Idle time before your %@ is required",
-					comment: ""
+					comment: "Idle time before your {PIN/password} is required"
 				),
 				PasswordController.shared.passwordType.humanReadableString
 			)

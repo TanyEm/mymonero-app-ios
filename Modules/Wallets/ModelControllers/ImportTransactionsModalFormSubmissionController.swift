@@ -69,7 +69,7 @@ extension ImportTransactionsModal
 			let amount = self.parameters.infoRequestParsingResult.import_fee
 			//
 			let statusMessage_prefix = String(
-				format: NSLocalizedString("Sending %@ XCASH…", comment: ""),
+				format: NSLocalizedString("Sending %@ XCASH…", comment: "Sending {amount} XCASH…"),
 				amount.localized_formattedString
 			)
 			self.parameters.preSuccess_nonTerminal_validationMessageUpdate_fn(statusMessage_prefix) // start with just prefix

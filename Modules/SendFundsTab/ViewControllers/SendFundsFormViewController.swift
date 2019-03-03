@@ -163,7 +163,7 @@ extension SendFundsForm
 					effectiveAmountTooltipText_orNil: String(
 						format: NSLocalizedString(
 							"Currency selector for\ndisplay purposes only.\nThe app will send %@.\n\nRate providers include\n%@.",
-							comment:""
+							comment:"Currency selector for\ndisplay purposes only.\nThe app will send {XCASH symbol}.\n\nRate providers include\n{cryptocompare.com domain}."
 						),
 						CcyConversionRates.Currency.XCASH.symbol,
 						SendFundsForm.rateAPI_domain // not .authority - don't need subdomain
@@ -1037,7 +1037,7 @@ extension SendFundsForm
 						message: String(
 							format: NSLocalizedString(
 								"Though %@ is selected, the app will send %@. (This is not an exchange.)\n\nRate providers include %@. Neither accuracy or favorability are guaranteed. Use at your own risk.",
-								comment: ""
+								comment: "Though {fiat currency symbol} is selected, the app will send {XCASH symbol}. (This is not an exchange.)\n\nRate providers include {cryptocompare domain}. Neither accuracy or favorability are guaranteed. Use at your own risk."
 							),
 							selectedCurrency.symbol,
 							CcyConversionRates.Currency.XCASH.symbol,
@@ -1048,7 +1048,7 @@ extension SendFundsForm
 					alertController.addAction(
 						UIAlertAction(
 							title: String(
-								format: NSLocalizedString("Agree and Send %@ %@", comment: ""),
+								format: NSLocalizedString("Agree and Send %@ %@", comment: "Agree and Send {amount} {XCASH}"),
 								MoneroAmount.shared_localized_doubleFormatter().string(for: amount_submittableDouble!)!,
 								CcyConversionRates.Currency.XCASH.symbol
 							),
@@ -1080,7 +1080,7 @@ extension SendFundsForm
 						message: String(
 							format: NSLocalizedString(
 								"Send %@ %@?",
-								comment: ""
+								comment: "Send {amount} {XCASH}?"
 							),
 							MoneroAmount.shared_localized_doubleFormatter().string(for: amount_submittableDouble!)!,
 							CcyConversionRates.Currency.XCASH.symbol
@@ -1400,9 +1400,9 @@ extension SendFundsForm
 			)
 			if err_str != nil {
 				self.set(
-					validationMessage: NSLocalizedString(
-						"Unable to use the result of decoding that QR code: \(err_str!)",
-						comment: ""
+					validationMessage: String(format:
+						NSLocalizedString("Unable to use the result of decoding that QR code: %@", comment: "Unable to use the result of decoding that QR code: {error}"),
+											  err_str!
 					),
 					wantsXButton: true
 				)
@@ -1419,7 +1419,7 @@ extension SendFundsForm
 			)
 			if err_str != nil {
 				self.set(
-					validationMessage: NSLocalizedString("Unable to decode that URL: \(err_str!)", comment: ""),
+					validationMessage: String(format: NSLocalizedString("Unable to decode that URL: %@", comment: "Unable to decode that URL: {error}"), err_str!),
 					wantsXButton: true
 				)
 				return

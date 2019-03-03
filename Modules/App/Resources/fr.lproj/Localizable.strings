@@ -62,7 +62,7 @@
 /* No comment provided by engineer. */
 "Address and Private Keys" = "Address and Private Keys";
 
-/* Agree and Send {amount} {XCA} */
+/* Agree and Send {amount} {XCASH} */
 "Agree and Send %@ %@" = "Agree and Send %1$@ %2$@";
 
 /* No comment provided by engineer. */
@@ -197,7 +197,7 @@
 /* No comment provided by engineer. */
 "Currency" = "Currency";
 
-/* Currency selector for\ndisplay purposes only.\nThe app will send {XCA symbol}.\n\nRate providers include\n{cryptocompare.com domain}. */
+/* Currency selector for\ndisplay purposes only.\nThe app will send {XCASH symbol}.\n\nRate providers include\n{cryptocompare.com domain}. */
 "Currency selector for\ndisplay purposes only.\nThe app will send %@.\n\nRate providers include\n%@." = "Currency selector for\ndisplay purposes only.\nThe app will send %1$@.\n\nRate providers include\n%2$@.";
 
 /* No comment provided by engineer. */
@@ -707,7 +707,7 @@
 /* Scan this code to send {amount} {currency symbol} in X-CASH to {address}. */
 "Scan this code to send %@ %@ in X-CASH to %@." = "Scan this code to send %1$@ %2$@ in X-CASH to %3$@.";
 
-/* Scan this code to send {amount} {XCA} to {address}. */
+/* Scan this code to send {amount} {XCASH} to {address}. */
 "Scan this code to send %@ %@ to %@." = "Scan this code to send %1$@ %2$@ to %3$@.";
 
 /* Scan this code to send X-CASH to {address}. */
@@ -746,14 +746,14 @@
 /* No comment provided by engineer. */
 "Send" = "Send";
 
-/* Send {amount} {XCA}? */
+/* Send {amount} {XCASH}? */
 "Send %@ %@?" = "Send %1$@ %2$@?";
 
 /* No comment provided by engineer. */
 "Send X-CACH" = "Send X-CASH";
 
-/* Sending {amount} XCA… */
-"Sending %@ XCA…" = "Sending %@ XCA…";
+/* Sending {amount} XCASH… */
+"Sending %@ XCASH…" = "Sending %@ XCASH…";
 
 /* No comment provided by engineer. */
 "Sending wallet balance…" = "Sending wallet balance…";
@@ -785,7 +785,7 @@
 /* No comment provided by engineer. */
 "Spendable balance too low" = "Spendable balance too low";
 
-/* Spendable balance too low. Have {amount} {XCA}; need {amount} {XCA}. */
+/* Spendable balance too low. Have {amount} {XCASH}; need {amount} {XCASH}. */
 "Spendable balance too low. Have %@ %@; need %@ %@." = "Spendable balance too low. Have %1$@ %2$@; need %3$@ %4$@.";
 
 /* No comment provided by engineer. */
@@ -812,8 +812,8 @@
 /* No comment provided by engineer. */
 "This private view key and the wallet address are the only things sent to the X-CASH server." = "This private view key and the wallet address are the only things sent to the X-CASH server.";
 
-/* This requires a one-time import fee of {amount} XCA */
-"This requires a one-time import fee of %@ XCA" = "This requires a one-time import fee of %@ XCA";
+/* This requires a one-time import fee of {amount} XCASH */
+"This requires a one-time import fee of %@ XCA" = "This requires a one-time import fee of %@ XCASH";
 
 /* No comment provided by engineer. */
 "This secret mnemonic is never sent to the X-CASH server." = "This secret mnemonic is never sent to the X-CASH server.";
@@ -821,7 +821,7 @@
 /* No comment provided by engineer. */
 "This wallet must first be imported." = "This wallet must first be imported.";
 
-/* Though {fiat currency symbol} is selected, the app will send {XCA symbol}. (This is not an exchange.)\n\nRate providers include {cryptocompare domain}. Neither accuracy or favorability are guaranteed. Use at your own risk. */
+/* Though {fiat currency symbol} is selected, the app will send {XCASH symbol}. (This is not an exchange.)\n\nRate providers include {cryptocompare domain}. Neither accuracy or favorability are guaranteed. Use at your own risk. */
 "Though %@ is selected, the app will send %@. (This is not an exchange.)\n\nRate providers include %@. Neither accuracy or favorability are guaranteed. Use at your own risk." = "Though %1$@ is selected, the app will send %2$@. (This is not an exchange.)\n\nRate providers include %3$@. Neither accuracy or favorability are guaranteed. Use at your own risk.";
 
 /* No comment provided by engineer. */
@@ -978,7 +978,7 @@
 "Wrong number of mix outputs provided" = "Wrong number of mix outputs provided";
 
 /* No comment provided by engineer. */
-"XCA Address (cached)" = "XCA Address (cached)";
+"XCASH Address (cached)" = "XCASH Address (cached)";
 
 /* No comment provided by engineer. */
 "You are about to log out of a wallet.\n\nMake sure you saved your mnemonic! It can be found by clicking the arrow next to Address on the Wallet screen. You will need your mnemonic to recover access to this wallet.\n\nAre you sure you want to log out of this wallet?" = "You are about to log out of a wallet.\n\nMake sure you saved your mnemonic! It can be found by clicking the arrow next to Address on the Wallet screen. You will need your mnemonic to recover access to this wallet.\n\nAre you sure you want to log out of this wallet?";
