@@ -791,7 +791,8 @@ extension SendFundsForm
 				chopNPlaces: UIFont.shouldStepDownLargerFontSizes ? 4 : 3 // for new high precision fees; TODO: is this future-proofed enough?
 			)
 			let text = String(
-				format: NSLocalizedString("+ %@ %@ EST. FEE", comment: ""),
+				//format: NSLocalizedString("+ %@ %@ EST. FEE", comment: ""),
+				format: NSLocalizedString("+ 4 XCASH EST. FEE", comment: ""),
 				components.formattedAmount,
 				components.final_ccy.symbol
 			)

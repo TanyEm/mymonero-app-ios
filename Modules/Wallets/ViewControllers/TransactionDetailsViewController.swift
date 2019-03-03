@@ -148,7 +148,7 @@ extension TransactionDetails
 				do {
 					let view = UICommonComponents.Details.CopyableLongStringFieldView(
 						labelVariant: self.fieldLabels_variant,
-						title: NSLocalizedString("Secret Key", comment: ""),
+						title: NSLocalizedString("Transaction Secret Key", comment: ""),
 						valueToDisplayIfZero: NSLocalizedString("Unknown", comment: "")
 					)
 					self.transactionKey__fieldView = view
